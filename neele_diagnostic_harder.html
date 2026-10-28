@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>نيل | Neele — عالم العربية السحري</title>
+<style>
+:root{--bg:#f4f0ff;--primary:#7042d8;--secondary:#b7a0f2;--accent:#ffca62;--text:#271c43;--panel:#fffaff;--border:#ded2f8;--water:#83d9e7;--green:#a5dba8;--shadow:0 14px 38px #38226b18}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;transition:background .2s,color .2s}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}.app{min-height:100vh;background:radial-gradient(ellipse at 15% 0%,color-mix(in srgb,var(--secondary) 28%,transparent),transparent 34%),var(--bg)}header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px clamp(14px,4vw,54px);border-bottom:1px solid var(--border);background:color-mix(in srgb,var(--panel) 86%,transparent);position:sticky;top:0;z-index:5;backdrop-filter:blur(14px)}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.2rem}.brand small{display:block;font-size:.7rem;font-weight:500;opacity:.7}.logo{width:42px;height:42px;object-fit:contain}.nav{display:flex;gap:7px;flex-wrap:wrap}.nav button,.quiet{background:transparent;color:var(--text);padding:10px 12px;border-radius:12px}.nav button:hover,.quiet:hover{background:var(--secondary)}.nav button.active{background:var(--primary);color:white}.primary{background:var(--primary);color:white;padding:12px 17px;border-radius:14px;font-weight:800;box-shadow:0 6px 15px color-mix(in srgb,var(--primary) 25%,transparent)}.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}.secondary-btn{background:var(--panel);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:13px}.wrap{max-width:1250px;margin:auto;padding:26px clamp(14px,3vw,36px) 60px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}.hero-copy,.hero-mascot,.panel{background:var(--panel);border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow)}.hero-copy{padding:clamp(24px,4vw,48px);position:relative;overflow:hidden}.eyebrow{color:var(--primary);font-weight:800;letter-spacing:.04em}.hero h1{font-size:clamp(2rem,4vw,3.7rem);line-height:1.2;margin:12px 0}.hero p{font-size:1.08rem;line-height:1.9;max-width:650px;opacity:.84}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.hero-mascot{display:grid;place-items:center;min-height:290px;position:relative;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--secondary) 38%,var(--panel)),var(--panel))}.hero-mascot:before{content:"";position:absolute;width:280px;height:280px;border:1px dashed var(--primary);border-radius:50%;opacity:.25}.mascot{width:min(300px,82%);height:auto;object-fit:contain;animation:float 4s ease-in-out infinite;position:relative;z-index:1;filter:drop-shadow(0 10px 12px #39206420) hue-rotate(var(--mascot-hue,0deg)) saturate(1.08)}.mascot .eye-pupil{transform-box:fill-box;transform-origin:center;animation:blink 5s infinite}.mascot:hover{animation:wiggle .6s ease-in-out}.mascot .body{fill:var(--mascot,#7042d8)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes blink{0%,46%,50%,100%{transform:scaleY(1)}48%{transform:scaleY(.12)}}@keyframes wiggle{0%,100%{transform:rotate(0)}30%{transform:rotate(-5deg)}70%{transform:rotate(5deg)}}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.stat{background:var(--panel);border:1px solid var(--border);padding:17px;border-radius:18px}.stat strong{display:block;font-size:1.5rem;color:var(--primary);margin-bottom:5px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:32px 0 14px}.section-head h2{margin:0;font-size:1.6rem}.muted{opacity:.68;font-size:.92rem}.world{position:relative;overflow:hidden;border-radius:30px;border:1px solid var(--border);background:linear-gradient(180deg,#d9f4ef 0%,#c5ead4 40%,#e9e6bd 100%);min-height:650px;box-shadow:var(--shadow)}.world.night{background:linear-gradient(180deg,#1b2751,#35456d 55%,#344c56)}.world svg.landscape{position:absolute;inset:0;width:100%;height:100%}.world-title{position:absolute;top:18px;right:22px;z-index:2;background:#fffdf0df;padding:10px 15px;border-radius:15px;color:#2b4e48;font-weight:900}.world.night .world-title{background:#17213de8;color:#fff}.destination{position:absolute;z-index:2;transform:translate(-50%,-50%);width:118px;text-align:center;background:transparent;color:#283d35;display:flex;flex-direction:column;align-items:center;gap:4px}.destination .island{width:63px;height:63px;border-radius:50% 50% 45% 45%;display:grid;place-items:center;background:#fff8dc;border:3px solid #fff;box-shadow:0 7px 0 #3b725e38,0 10px 20px #234d3740;font-size:1.7rem;transition:.2s;position:relative}.destination:hover .island{transform:translateY(-5px) scale(1.06)}.destination strong{font-size:.82rem;background:#fffdf0e8;padding:5px 8px;border-radius:9px;max-width:120px}.destination .state{font-size:.7rem;background:#fffdf0d9;border-radius:20px;padding:3px 7px}.destination.locked{filter:grayscale(.65);opacity:.75}.destination.locked .island{background:#d4d6db}.destination.done .island{background:#ffe9a6;border-color:#fff}.destination.current .island{outline:4px solid #ffcc59;outline-offset:3px;animation:glow 2s infinite}.destination.current:after{content:"";position:absolute;top:-38px;width:70px;height:34px;background-repeat:no-repeat;background-size:contain;background-position:center;pointer-events:none}@keyframes glow{50%{box-shadow:0 0 0 8px #ffcf5b42,0 8px 20px #234d3740}}.map-mascot{position:absolute;z-index:3;width:82px;height:auto;object-fit:contain;transform:translate(-50%,-100%);pointer-events:none;filter:drop-shadow(0 5px 5px #172b3533) hue-rotate(var(--mascot-hue,0deg)) saturate(1.08);transition:left .5s,top .5s;animation:float 3.5s ease-in-out infinite}.map-foot{position:absolute;bottom:15px;left:16px;right:16px;display:flex;justify-content:space-between;gap:12px;align-items:center;z-index:2;background:#fffdf0e8;border-radius:17px;padding:12px 15px;color:#29453c}.progress-track{height:9px;background:#d9d2e8;border-radius:20px;overflow:hidden;min-width:100px}.progress-track span{height:100%;display:block;background:var(--primary);border-radius:20px;transition:width .3s}.progress-row{display:flex;gap:10px;align-items:center}.map-foot .progress-track{width:160px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:20px;border-radius:20px;background:var(--panel);border:1px solid var(--border)}.feature .emoji{font-size:1.7rem}.feature h3{margin:8px 0}.feature p{line-height:1.65;opacity:.76}.page{display:none}.page.active{display:block}.panel{padding:24px}.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.setting{padding:17px;border:1px solid var(--border);border-radius:17px;background:color-mix(in srgb,var(--panel) 88%,var(--secondary))}.setting label{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;margin-bottom:10px}.setting input[type=color]{width:48px;height:35px;border:0;background:transparent;padding:0}.setting input[type=text],.setting input[type=number],.setting select,.setting textarea,.field{width:100%;padding:11px;border-radius:11px;border:1px solid var(--border);background:var(--panel);color:var(--text)}.preset-row{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.swatch{width:34px;height:34px;border-radius:50%;border:3px solid var(--panel);box-shadow:0 0 0 1px var(--border)}.modal-backdrop{position:fixed;inset:0;background:#15102491;z-index:20;display:none;align-items:center;justify-content:center;padding:16px}.modal-backdrop.show{display:flex}.modal{width:min(760px,100%);max-height:90vh;overflow:auto;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:26px;padding:25px;box-shadow:0 24px 80px #0004}.modal-top{display:flex;justify-content:space-between;align-items:start;gap:15px}.close{font-size:1.3rem;background:transparent;color:var(--text);padding:5px 10px;border-radius:10px}.modal h2{margin:5px 0 10px}.modal p{line-height:1.8}.lesson-box{padding:17px;background:color-mix(in srgb,var(--secondary) 17%,var(--panel));border-radius:17px;margin:15px 0}.answer{display:block;width:100%;text-align:right;padding:12px 14px;border:1px solid var(--border);border-radius:13px;background:var(--panel);color:var(--text);margin:8px 0}.answer:hover{border-color:var(--primary)}.answer.correct{background:#d8f5df;border-color:#4ca86b;color:#174c2a}.answer.wrong{background:#ffe0e1;border-color:#d65b67;color:#7b202a}.feedback{padding:12px;border-radius:12px;margin-top:12px;display:none}.feedback.show{display:block}.book-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.book{border:1px solid var(--border);border-radius:16px;padding:16px}.book a{color:var(--primary);font-weight:800}.toast{position:fixed;bottom:18px;left:18px;background:var(--text);color:var(--panel);padding:13px 18px;border-radius:13px;z-index:40;opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.tiny{font-size:.8rem;opacity:.7}.footer{margin-top:28px;text-align:center;opacity:.65;font-size:.85rem}
+@media(max-width:800px){header{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr}.hero-mascot{min-height:230px}.mascot{width:180px}.features{grid-template-columns:1fr}.world{min-height:600px}.destination{width:88px}.destination .island{width:51px;height:51px;font-size:1.4rem}.destination strong{font-size:.72rem;max-width:90px}.map-mascot{width:62px}.stats{gap:7px}.stat{padding:12px}.settings-grid,.book-list{grid-template-columns:1fr}.map-foot{align-items:flex-start;flex-direction:column}.map-foot .progress-track{width:120px}}
+
+/* Mascot interactive styles */
+.mascot-tap{border:0;background:transparent;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;overflow:visible}
+.header-mascot{width:46px;height:48px;flex:none}
+.header-mascot .nee-mascot{width:100%;height:100%}
+.hero-mascot-tap{width:min(330px,82%);position:relative;z-index:2}
+.hero-mascot-tap .nee-mascot{width:100%;height:auto;max-height:350px}
+.nee-mascot{overflow:visible;display:block;transform-origin:50% 85%;animation:neeFloat 3.6s ease-in-out infinite;filter:drop-shadow(0 9px 9px #32156818);cursor:pointer}
+.nee-mascot:focus-visible,.mascot-tap:focus-visible{outline:3px solid var(--accent,#ffc83d);outline-offset:5px;border-radius:20px}
+@keyframes neeFloat{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -6px;rotate:-1deg}}
+.nee-mascot .lid{opacity:0;transition:opacity .12s}
+.nee-mascot .mouth-open,.nee-mascot .thinking-dots,.nee-mascot .sleep-z{opacity:0}
+.nee-mascot .smile{opacity:1}
+.nee-mascot .emotion-sparkles{opacity:.65;animation:sparklePulse 2.2s ease-in-out infinite}
+@keyframes sparklePulse{0%,100%{opacity:.35;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+.nee-mascot.mascot-emotion-happy .smile{opacity:1}
+.nee-mascot.mascot-emotion-excited{animation:neeExcited .48s ease-in-out 3}
+@keyframes neeExcited{0%,100%{transform:scale(1) rotate(0)}30%{transform:scale(1.07) rotate(-5deg)}65%{transform:scale(1.08) rotate(5deg)}}
+.nee-mascot.mascot-emotion-surprised .eye ellipse:first-child{transform-box:fill-box;transform-origin:center;transform:scale(1.12)}
+.nee-mascot.mascot-emotion-surprised .mouth-open{opacity:1}
+.nee-mascot.mascot-emotion-surprised .smile{opacity:0}
+.nee-mascot.mascot-emotion-wink .eye-right{animation:none;transform:scaleY(.08)}
+.nee-mascot.mascot-emotion-wink .eye-right .pupil,.nee-mascot.mascot-emotion-wink .eye-right ellipse:first-child,.nee-mascot.mascot-emotion-wink .eye-right circle{opacity:0}
+.nee-mascot.mascot-emotion-wink .lid-right{opacity:1}
+.nee-mascot.mascot-emotion-thinking .pupil{animation:neeLook 1.1s ease-in-out infinite alternate}
+.nee-mascot.mascot-emotion-thinking .thinking-dots{opacity:1;animation:dotBob .8s ease-in-out infinite alternate}
+@keyframes neeLook{to{transform:translate(4px,-3px)}}
+@keyframes dotBob{to{transform:translateY(-5px)}}
+.nee-mascot.mascot-emotion-sleepy{animation:neeSleep 4s ease-in-out infinite}
+.nee-mascot.mascot-emotion-sleepy .eye{animation:none;transform:scaleY(.08)}
+.nee-mascot.mascot-emotion-sleepy .eye ellipse:first-child,.nee-mascot.mascot-emotion-sleepy .eye .pupil,.nee-mascot.mascot-emotion-sleepy .eye circle{opacity:0}
+.nee-mascot.mascot-emotion-sleepy .lid{opacity:1}
+.nee-mascot.mascot-emotion-sleepy .sleep-z{opacity:1;animation:sleepZ 2s ease-in-out infinite}
+.nee-mascot.mascot-emotion-sleepy .smile{opacity:0}
+@keyframes neeSleep{0%,100%{translate:0 0}50%{translate:0 3px}}
+@keyframes sleepZ{0%{transform:translate(0,7px);opacity:0}35%{opacity:1}100%{transform:translate(8px,-8px);opacity:0}}
+.nee-mascot .cheek{opacity:1!important;animation:none!important}
+.nee-mascot .eye{transform-box:fill-box;transform-origin:center;animation:neeBlink 6.2s infinite}
+.nee-mascot .eye-right{animation-delay:.08s}
+@keyframes neeBlink{
+  0%,43%,46%,76%,79%,100%{transform:scaleY(1)}
+  44.5%,77.5%{transform:scaleY(.08)}
+}
+.nee-mascot .flipper{transform-box:fill-box;transform-origin:50% 10%;animation:neeFlipper 3.8s ease-in-out infinite}
+.nee-mascot .right-flipper{animation-delay:.12s}
+@keyframes neeFlipper{0%,100%{rotate:0deg}50%{rotate:-7deg}}
+.nee-mascot .belly-star{transform-box:fill-box;transform-origin:center;animation:starBreath 3s ease-in-out infinite}
+@keyframes starBreath{0%,100%{scale:1}50%{scale:1.06}}
+.nee-mascot.mascot-emotion-excited .flipper{animation:neeWave .35s ease-in-out infinite alternate}
+@keyframes neeWave{from{rotate:-10deg}to{rotate:12deg}}
+.map-mascot{width:86px;height:92px;position:absolute;z-index:3;transform:translate(-50%,-100%);pointer-events:auto;cursor:pointer;transition:left .5s,top .5s}
+.map-mascot .nee-mascot{width:100%;height:100%;overflow:visible}
+.header-mascot .nee-mascot{animation-duration:3s}
+
+/* Mascot polish: blinking & details */
+.nee-mascot .eye{transform-box:fill-box;transform-origin:center;transition:transform .22s ease}
+.nee-mascot .eye-left,.nee-mascot .eye-right{animation:neeBlink 5.7s infinite}
+.nee-mascot .eye-right{animation-delay:0s!important}
+.nee-mascot .eye-white,.nee-mascot .pupil,.nee-mascot .eye circle,.nee-mascot .lid,
+.nee-mascot .smile,.nee-mascot .mouth-open,.nee-mascot .beak{transition:opacity .2s ease,transform .2s ease}
+.nee-mascot .lid{opacity:0;transition:opacity .16s ease}
+.nee-mascot.mascot-emotion-surprised .eye{animation:none;transform:scale(1.07)}
+.nee-mascot.mascot-emotion-surprised .mouth-open{opacity:1}
+.nee-mascot.mascot-emotion-surprised .smile{opacity:0}
+.nee-mascot.mascot-emotion-wink .eye-right{animation:none;transform:scaleY(.12)}
+.nee-mascot.mascot-emotion-wink .eye-right .eye-white,
+.nee-mascot.mascot-emotion-wink .eye-right .pupil,
+.nee-mascot.mascot-emotion-wink .eye-right circle{opacity:0}
+.nee-mascot.mascot-emotion-wink .lid-right{opacity:1}
+.nee-mascot.mascot-emotion-wink .eye-left{animation:none;transform:scaleY(1)}
+.nee-mascot.mascot-emotion-sleepy .eye{animation:none;transform:scaleY(.13)}
+.nee-mascot.mascot-emotion-sleepy .eye-white,
+.nee-mascot.mascot-emotion-sleepy .eye .pupil,
+.nee-mascot.mascot-emotion-sleepy .eye circle{opacity:0}
+.nee-mascot.mascot-emotion-sleepy .lid{opacity:1}
+.nee-mascot.mascot-emotion-sleepy .smile{opacity:0}
+.nee-mascot .cheek{fill:var(--mascot-blush,#ff8eae)!important;opacity:1!important;animation:none!important}
+
+/* Individual Accessory SVG Display Controls */
+.nee-mascot .acc{display:none;pointer-events:none}
+.nee-mascot.acc-cap .acc-cap,
+.nee-mascot.acc-top-hat .acc-top-hat,
+.nee-mascot.acc-glasses .acc-glasses,
+.nee-mascot.acc-lashes .acc-lashes,
+.nee-mascot.acc-tie .acc-tie,
+.nee-mascot.acc-scarf .acc-scarf,
+.nee-mascot.acc-bowtie .acc-bowtie,
+.nee-mascot.acc-bow .acc-bow,
+.nee-mascot.acc-flower .acc-flower,
+.nee-mascot.acc-halo .acc-halo{display:inline}
+
+.accessory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:10px;margin:12px 0 18px}
+.accessory-option{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:84px;padding:10px;border:1px solid var(--border);border-radius:16px;background:var(--panel);color:var(--text);cursor:pointer;font:inherit;transition:transform .16s,border-color .16s,background .16s}
+.accessory-option:hover{transform:translateY(-2px)}
+.accessory-option[aria-pressed="true"]{border:2px solid var(--primary);background:color-mix(in srgb,var(--primary) 12%,var(--panel));box-shadow:0 4px 12px #7042d820}
+.accessory-emoji{font-size:27px;line-height:1.2}
+.mascot-four-colors{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mascot-four-colors input[type=color],.accessory-colors input[type=color]{width:100%;min-height:42px}
+
+/* Dedicated accessory color panel styling */
+.acc-color-card{border:1px solid var(--border);border-radius:18px;padding:14px;background:color-mix(in srgb,var(--panel) 92%,var(--secondary));display:flex;flex-direction:column;gap:10px}
+.acc-color-card-head{display:flex;align-items:center;gap:8px;font-weight:800;font-size:.95rem}
+.acc-color-inputs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.acc-color-field{display:flex;flex-direction:column;gap:5px;font-size:.8rem;font-weight:700}
+.acc-color-field input[type=color]{width:100%;height:38px;border:0;background:transparent;cursor:pointer}
+
+@media(max-width:520px){.mascot-four-colors{grid-template-columns:repeat(2,minmax(0,1fr))}.acc-color-inputs{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="app">
+<header>
+  <div class="brand"><button class="mascot-tap header-mascot" aria-label="تفاعل مع تميمة نيل"><svg class="nee-mascot mascot-emotion-happy" viewBox="0 0 260 260" role="img" aria-label="تميمة نيل التفاعلية" tabindex="0">
+<title>نيل — رفيق المغامرة</title>
+<defs>
+ <linearGradient id="neeBody" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="var(--mascot,#7042d8)"/><stop offset="1" stop-color="var(--mascot-dark,#5129b7)"/></linearGradient>
+ <linearGradient id="neeBelly" x1=".15" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="var(--mascot-belly,#eee4ff)"/><stop offset="1" stop-color="#d9c7ff"/></linearGradient>
+ <filter id="neeShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#321568" flood-opacity=".16"/></filter>
+</defs>
+<ellipse class="mascot-shadow" cx="132" cy="239" rx="73" ry="10" fill="#43306a" opacity=".14"/>
+<path d="M69 56 C45 28 31 35 39 58 C44 72 57 78 73 72Z" fill="var(--mascot-dark,#5129b7)"/>
+<path d="M188 53 C209 26 226 31 218 55 C213 69 201 76 185 70Z" fill="var(--mascot-dark,#5129b7)"/>
+<path class="flipper left-flipper" d="M48 151 C23 150 16 171 31 185 C42 194 56 180 60 164Z" fill="var(--mascot-dark,#5129b7)"/>
+<path class="flipper right-flipper" d="M207 147 C234 146 242 167 226 183 C215 194 201 179 197 162Z" fill="var(--mascot-dark,#5129b7)"/>
+<path d="M130 28 C82 28 52 53 42 99 C29 151 40 202 70 224 C91 240 112 243 132 243 C154 243 178 239 198 221 C227 194 236 148 222 98 C210 52 178 28 130 28Z" fill="url(#neeBody)" filter="url(#neeShadow)"/>
+<ellipse cx="88" cy="61" rx="17" ry="6" transform="rotate(-28 88 61)" fill="#fff" opacity=".13"/>
+<path d="M79 128 C84 107 103 99 130 100 C158 99 178 108 184 130 C194 164 183 204 160 218 C145 227 113 227 98 218 C75 204 67 164 79 128Z" fill="url(#neeBelly)"/>
+<ellipse class="cheek left-cheek" cx="73" cy="147" rx="15" ry="12" fill="var(--mascot-blush,#ff8eae)" opacity=".96"/>
+<ellipse class="cheek right-cheek" cx="190" cy="143" rx="15" ry="12" fill="var(--mascot-blush,#ff8eae)" opacity=".96"/>
+<g class="eye eye-left">
+ <ellipse class="eye-white" cx="94" cy="112" rx="31" ry="34" fill="var(--mascot-eye-white,#fff)"/>
+ <ellipse class="pupil" cx="99" cy="114" rx="18" ry="21" fill="var(--mascot-pupil,#17131f)"/>
+ <circle cx="106" cy="105" r="7.2" fill="#fff"/>
+ <circle cx="91" cy="121" r="3" fill="#fff" opacity=".85"/>
+</g>
+<g class="eye eye-right">
+ <ellipse class="eye-white" cx="166" cy="112" rx="31" ry="34" fill="var(--mascot-eye-white,#fff)"/>
+ <ellipse class="pupil" cx="161" cy="114" rx="18" ry="21" fill="var(--mascot-pupil,#17131f)"/>
+ <circle cx="168" cy="105" r="7.2" fill="#fff"/>
+ <circle cx="153" cy="121" r="3" fill="#fff" opacity=".85"/>
+</g>
+<path class="lid lid-left" d="M63 112 Q94 83 125 112" fill="none" stroke="#2a174d" stroke-width="8" stroke-linecap="round"/>
+<path class="lid lid-right" d="M135 112 Q166 83 197 112" fill="none" stroke="#2a174d" stroke-width="8" stroke-linecap="round"/>
+<path class="beak" d="M113 137 Q130 128 147 137 Q140 153 130 154 Q120 153 113 137Z" fill="var(--mascot-beak,#ffc52f)" stroke="#e8a000" stroke-width="2"/>
+<path class="mouth-open" d="M118 139 Q130 134 142 139 Q139 151 130 151 Q122 150 118 139Z" fill="#9d355d"/>
+<path class="smile" d="M116 140 Q130 157 144 140" fill="none" stroke="#a56a00" stroke-width="3" stroke-linecap="round"/>
+<path class="belly-star" d="M130 174 l5 9 10 1 -8 7 2 10 -9 -5 -9 5 2 -10 -8 -7 10 -1Z" fill="#b58aff" opacity=".96"/>
+
+<!-- Wearable accessories with independent custom variables -->
+<g class="acc acc-cap" aria-label="Cap">
+ <path d="M91 47 Q92 20 130 20 Q168 20 169 47 L163 61 L97 61Z" fill="var(--cap-color,#5c35bd)" stroke="var(--cap-trim,#ffc83d)" stroke-width="3" stroke-linejoin="round"/>
+ <path d="M84 58 Q130 51 176 58 Q182 61 177 67 Q130 74 83 67 Q78 63 84 58Z" fill="var(--cap-color,#5c35bd)" stroke="var(--cap-trim,#ffc83d)" stroke-width="3"/>
+ <path d="M97 48 Q130 53 163 48 L162 56 Q130 62 98 56Z" fill="var(--cap-trim,#ffc83d)"/>
+ <path d="M130 26 l4 7 8 1 -6 5 2 8 -8 -4 -7 4 1 -8 -6 -5 8 -1Z" fill="#fff1b9"/>
+</g>
+<g class="acc acc-top-hat" aria-label="Top hat">
+ <path d="M98 28 L95 2 L165 2 L162 28 Z" fill="var(--top-hat-color,#332a45)" stroke="var(--top-hat-trim,#ffc83d)" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M80 28 C80 23 180 23 180 28 C180 33 80 33 80 28 Z" fill="var(--top-hat-color,#332a45)" stroke="var(--top-hat-trim,#ffc83d)" stroke-width="2.5"/>
+ <rect x="96" y="21" width="68" height="6" fill="var(--top-hat-trim,#ffc83d)"/>
+</g>
+<g class="acc acc-glasses" aria-label="Glasses">
+ <rect x="62" y="91" width="61" height="45" rx="18" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5"/>
+ <rect x="137" y="91" width="61" height="45" rx="18" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5"/>
+ <path d="M123 105 Q130 100 137 105" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5" stroke-linecap="round"/>
+ <path d="M63 101 L72 96 M138 101 L147 96" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</g>
+<g class="acc acc-lashes" aria-label="Eyelashes" fill="none" stroke="var(--lashes-color,#271c43)" stroke-width="3" stroke-linecap="round">
+ <path d="M68 86 Q80 74 95 78 M102 79 Q115 76 122 84 M78 80 Q88 68 100 72"/>
+ <path d="M138 84 Q145 76 158 79 M165 78 Q180 74 192 86 M160 72 Q172 68 182 80"/>
+</g>
+<g class="acc acc-tie" aria-label="Tie">
+ <path d="M125 156 L130 160 L135 156 L133 174 L130 184 L127 174 Z" fill="var(--tie-color,#7042d8)" stroke="var(--tie-trim,#ffc83d)" stroke-width="1.5" stroke-linejoin="round"/>
+ <path d="M124 154 Q130 151 136 154 L134 159 L130 161 L126 159 Z" fill="var(--tie-trim,#ffc83d)" stroke="var(--tie-color,#7042d8)" stroke-width="1.2"/>
+</g>
+<g class="acc acc-scarf" aria-label="Scarf">
+ <path d="M65 130 C90 120 170 120 195 130 C205 142 200 158 185 154 C155 146 105 146 75 154 C60 158 55 142 65 130 Z" fill="var(--scarf-color,#e64a19)" stroke="var(--scarf-trim,#ffc83d)" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M152 148 C165 148 168 165 165 185 C162 195 145 195 145 182 C145 168 144 150 152 148 Z" fill="var(--scarf-color,#e64a19)" stroke="var(--scarf-trim,#ffc83d)" stroke-width="2" stroke-linejoin="round"/>
+</g>
+<!-- Bowtie moved down directly under the yellow beak -->
+<g class="acc acc-bowtie" aria-label="Bow Tie">
+ <path d="M130 164 Q111 147 107 162 Q105 176 128 171Z" fill="var(--bowtie-color,#e91e63)" stroke="var(--bowtie-trim,#ffffff)" stroke-width="2.5"/>
+ <path d="M130 164 Q149 147 153 162 Q155 176 132 171Z" fill="var(--bowtie-color,#e91e63)" stroke="var(--bowtie-trim,#ffffff)" stroke-width="2.5"/>
+ <circle cx="130" cy="167" r="5" fill="var(--bowtie-trim,#ffffff)"/>
+</g>
+<g class="acc acc-bow" aria-label="Head Bow">
+ <path d="M185 45 Q170 28 168 43 Q166 57 183 52Z" fill="var(--bow-color,#ff4081)" stroke="var(--bow-trim,#ffffff)" stroke-width="2"/>
+ <path d="M187 45 Q202 28 204 43 Q206 57 189 52Z" fill="var(--bow-color,#ff4081)" stroke="var(--bow-trim,#ffffff)" stroke-width="2"/>
+ <circle cx="186" cy="48" r="4" fill="var(--bow-trim,#ffffff)"/>
+</g>
+<g class="acc acc-flower" aria-label="Flower clip">
+ <path d="M188 72 Q181 59 190 57 Q200 57 196 69 Q207 60 211 69 Q214 78 201 78 Q208 91 197 94 Q187 94 190 81 Q178 88 174 79 Q172 69 188 72Z" fill="var(--flower-color,#ff9800)" stroke="var(--flower-trim,#ffffff)" stroke-width="2"/>
+ <circle cx="194" cy="76" r="5" fill="var(--flower-trim,#ffffff)"/>
+</g>
+<g class="acc acc-halo" aria-label="Magic halo">
+ <ellipse cx="130" cy="18" rx="34" ry="8" fill="none" stroke="var(--halo-trim,#ffd700)" stroke-width="5" transform="rotate(-7 130 18)"/>
+ <path d="M166 12 l3 6 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1Z" fill="var(--halo-trim,#ffd700)"/>
+</g>
+
+<g class="emotion-sparkles" fill="#ffc83d"><path d="M22 92 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5Z"/><path d="M226 82 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3Z"/></g>
+<g class="thinking-dots" fill="#ffc83d"><circle cx="116" cy="18" r="3.5"/><circle cx="130" cy="12" r="3.5"/><circle cx="144" cy="18" r="3.5"/></g>
+<text class="sleep-z" x="188" y="48" font-size="21" font-weight="900" fill="#8d6be8">Z</text>
+</svg></button><div>نيل <small>Neele · عالم العربية السحري</small></div></div>
+  <nav class="nav" aria-label="Main navigation"><button class="active" data-page="home">العالم</button><button data-page="library">المكتبة</button><button data-page="writing">قصصي</button><button data-page="profile">ملفي</button><button data-page="settings">التخصيص ⚙</button></nav>
+  <button class="primary" id="diagnosticBtn">تشخيص 60 سؤالًا ✦</button>
+</header>
+<main class="wrap">
+<section id="home" class="page active">
+  <div class="hero"><div class="hero-copy"><div class="eyebrow">✧ مغامرتك في العربية تبدأ هنا</div><h1>كل كلمة تفتح<br>بابًا لعالم جديد.</h1><p>اتبع مجرى نيل، اكتشف جزر الحكايات وحدائق النحو، واجمع المعرفة في رحلة تتقدم فيها على إيقاعك أنت. هذه مغامرتك — لا توجد طريقتان متشابهتان للتعلّم.</p><div class="hero-actions"><button class="primary" id="exploreBtn">تابع رحلتك ←</button><button class="secondary-btn" id="profileQuick">ملفي وتقدّمي</button></div></div>
+  <div class="hero-mascot"><button class="mascot-tap hero-mascot-tap" aria-label="اضغط للتفاعل مع نيل"><svg class="nee-mascot mascot-emotion-happy" viewBox="0 0 260 260" role="img" aria-label="تميمة نيل التفاعلية" tabindex="0">
+<title>نيل — رفيق المغامرة</title>
+<defs>
+ <linearGradient id="neeBody" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="var(--mascot,#7042d8)"/><stop offset="1" stop-color="var(--mascot-dark,#5129b7)"/></linearGradient>
+ <linearGradient id="neeBelly" x1=".15" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="var(--mascot-belly,#eee4ff)"/><stop offset="1" stop-color="#d9c7ff"/></linearGradient>
+ <filter id="neeShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#321568" flood-opacity=".16"/></filter>
+</defs>
+<ellipse class="mascot-shadow" cx="132" cy="239" rx="73" ry="10" fill="#43306a" opacity=".14"/>
+<path d="M69 56 C45 28 31 35 39 58 C44 72 57 78 73 72Z" fill="var(--mascot-dark,#5129b7)"/>
+<path d="M188 53 C209 26 226 31 218 55 C213 69 201 76 185 70Z" fill="var(--mascot-dark,#5129b7)"/>
+<path class="flipper left-flipper" d="M48 151 C23 150 16 171 31 185 C42 194 56 180 60 164Z" fill="var(--mascot-dark,#5129b7)"/>
+<path class="flipper right-flipper" d="M207 147 C234 146 242 167 226 183 C215 194 201 179 197 162Z" fill="var(--mascot-dark,#5129b7)"/>
+<path d="M130 28 C82 28 52 53 42 99 C29 151 40 202 70 224 C91 240 112 243 132 243 C154 243 178 239 198 221 C227 194 236 148 222 98 C210 52 178 28 130 28Z" fill="url(#neeBody)" filter="url(#neeShadow)"/>
+<ellipse cx="88" cy="61" rx="17" ry="6" transform="rotate(-28 88 61)" fill="#fff" opacity=".13"/>
+<path d="M79 128 C84 107 103 99 130 100 C158 99 178 108 184 130 C194 164 183 204 160 218 C145 227 113 227 98 218 C75 204 67 164 79 128Z" fill="url(#neeBelly)"/>
+<ellipse class="cheek left-cheek" cx="73" cy="147" rx="15" ry="12" fill="var(--mascot-blush,#ff8eae)" opacity=".96"/>
+<ellipse class="cheek right-cheek" cx="190" cy="143" rx="15" ry="12" fill="var(--mascot-blush,#ff8eae)" opacity=".96"/>
+<g class="eye eye-left">
+ <ellipse class="eye-white" cx="94" cy="112" rx="31" ry="34" fill="var(--mascot-eye-white,#fff)"/>
+ <ellipse class="pupil" cx="99" cy="114" rx="18" ry="21" fill="var(--mascot-pupil,#17131f)"/>
+ <circle cx="106" cy="105" r="7.2" fill="#fff"/>
+ <circle cx="91" cy="121" r="3" fill="#fff" opacity=".85"/>
+</g>
+<g class="eye eye-right">
+ <ellipse class="eye-white" cx="166" cy="112" rx="31" ry="34" fill="var(--mascot-eye-white,#fff)"/>
+ <ellipse class="pupil" cx="161" cy="114" rx="18" ry="21" fill="var(--mascot-pupil,#17131f)"/>
+ <circle cx="168" cy="105" r="7.2" fill="#fff"/>
+ <circle cx="153" cy="121" r="3" fill="#fff" opacity=".85"/>
+</g>
+<path class="lid lid-left" d="M63 112 Q94 83 125 112" fill="none" stroke="#2a174d" stroke-width="8" stroke-linecap="round"/>
+<path class="lid lid-right" d="M135 112 Q166 83 197 112" fill="none" stroke="#2a174d" stroke-width="8" stroke-linecap="round"/>
+<path class="beak" d="M113 137 Q130 128 147 137 Q140 153 130 154 Q120 153 113 137Z" fill="var(--mascot-beak,#ffc52f)" stroke="#e8a000" stroke-width="2"/>
+<path class="mouth-open" d="M118 139 Q130 134 142 139 Q139 151 130 151 Q122 150 118 139Z" fill="#9d355d"/>
+<path class="smile" d="M116 140 Q130 157 144 140" fill="none" stroke="#a56a00" stroke-width="3" stroke-linecap="round"/>
+<path class="belly-star" d="M130 174 l5 9 10 1 -8 7 2 10 -9 -5 -9 5 2 -10 -8 -7 10 -1Z" fill="#b58aff" opacity=".96"/>
+
+<g class="acc acc-cap" aria-label="Cap">
+ <path d="M91 47 Q92 20 130 20 Q168 20 169 47 L163 61 L97 61Z" fill="var(--cap-color,#5c35bd)" stroke="var(--cap-trim,#ffc83d)" stroke-width="3" stroke-linejoin="round"/>
+ <path d="M84 58 Q130 51 176 58 Q182 61 177 67 Q130 74 83 67 Q78 63 84 58Z" fill="var(--cap-color,#5c35bd)" stroke="var(--cap-trim,#ffc83d)" stroke-width="3"/>
+ <path d="M97 48 Q130 53 163 48 L162 56 Q130 62 98 56Z" fill="var(--cap-trim,#ffc83d)"/>
+ <path d="M130 26 l4 7 8 1 -6 5 2 8 -8 -4 -7 4 1 -8 -6 -5 8 -1Z" fill="#fff1b9"/>
+</g>
+<g class="acc acc-top-hat" aria-label="Top hat">
+ <path d="M98 28 L95 2 L165 2 L162 28 Z" fill="var(--top-hat-color,#332a45)" stroke="var(--top-hat-trim,#ffc83d)" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M80 28 C80 23 180 23 180 28 C180 33 80 33 80 28 Z" fill="var(--top-hat-color,#332a45)" stroke="var(--top-hat-trim,#ffc83d)" stroke-width="2.5"/>
+ <rect x="96" y="21" width="68" height="6" fill="var(--top-hat-trim,#ffc83d)"/>
+</g>
+<g class="acc acc-glasses" aria-label="Glasses">
+ <rect x="62" y="91" width="61" height="45" rx="18" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5"/>
+ <rect x="137" y="91" width="61" height="45" rx="18" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5"/>
+ <path d="M123 105 Q130 100 137 105" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5" stroke-linecap="round"/>
+ <path d="M63 101 L72 96 M138 101 L147 96" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</g>
+<g class="acc acc-lashes" aria-label="Eyelashes" fill="none" stroke="var(--lashes-color,#271c43)" stroke-width="3" stroke-linecap="round">
+ <path d="M68 86 Q80 74 95 78 M102 79 Q115 76 122 84 M78 80 Q88 68 100 72"/>
+ <path d="M138 84 Q145 76 158 79 M165 78 Q180 74 192 86 M160 72 Q172 68 182 80"/>
+</g>
+<g class="acc acc-tie" aria-label="Tie">
+ <path d="M125 156 L130 160 L135 156 L133 174 L130 184 L127 174 Z" fill="var(--tie-color,#7042d8)" stroke="var(--tie-trim,#ffc83d)" stroke-width="1.5" stroke-linejoin="round"/>
+ <path d="M124 154 Q130 151 136 154 L134 159 L130 161 L126 159 Z" fill="var(--tie-trim,#ffc83d)" stroke="var(--tie-color,#7042d8)" stroke-width="1.2"/>
+</g>
+<g class="acc acc-scarf" aria-label="Scarf">
+ <path d="M65 130 C90 120 170 120 195 130 C205 142 200 158 185 154 C155 146 105 146 75 154 C60 158 55 142 65 130 Z" fill="var(--scarf-color,#e64a19)" stroke="var(--scarf-trim,#ffc83d)" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M152 148 C165 148 168 165 165 185 C162 195 145 195 145 182 C145 168 144 150 152 148 Z" fill="var(--scarf-color,#e64a19)" stroke="var(--scarf-trim,#ffc83d)" stroke-width="2" stroke-linejoin="round"/>
+</g>
+<!-- Bowtie moved down directly under the yellow beak -->
+<g class="acc acc-bowtie" aria-label="Bow Tie">
+ <path d="M130 164 Q111 147 107 162 Q105 176 128 171Z" fill="var(--bowtie-color,#e91e63)" stroke="var(--bowtie-trim,#ffffff)" stroke-width="2.5"/>
+ <path d="M130 164 Q149 147 153 162 Q155 176 132 171Z" fill="var(--bowtie-color,#e91e63)" stroke="var(--bowtie-trim,#ffffff)" stroke-width="2.5"/>
+ <circle cx="130" cy="167" r="5" fill="var(--bowtie-trim,#ffffff)"/>
+</g>
+<g class="acc acc-bow" aria-label="Head Bow">
+ <path d="M185 45 Q170 28 168 43 Q166 57 183 52Z" fill="var(--bow-color,#ff4081)" stroke="var(--bow-trim,#ffffff)" stroke-width="2"/>
+ <path d="M187 45 Q202 28 204 43 Q206 57 189 52Z" fill="var(--bow-color,#ff4081)" stroke="var(--bow-trim,#ffffff)" stroke-width="2"/>
+ <circle cx="186" cy="48" r="4" fill="var(--bow-trim,#ffffff)"/>
+</g>
+<g class="acc acc-flower" aria-label="Flower clip">
+ <path d="M188 72 Q181 59 190 57 Q200 57 196 69 Q207 60 211 69 Q214 78 201 78 Q208 91 197 94 Q187 94 190 81 Q178 88 174 79 Q172 69 188 72Z" fill="var(--flower-color,#ff9800)" stroke="var(--flower-trim,#ffffff)" stroke-width="2"/>
+ <circle cx="194" cy="76" r="5" fill="var(--flower-trim,#ffffff)"/>
+</g>
+<g class="acc acc-halo" aria-label="Magic halo">
+ <ellipse cx="130" cy="18" rx="34" ry="8" fill="none" stroke="var(--halo-trim,#ffd700)" stroke-width="5" transform="rotate(-7 130 18)"/>
+ <path d="M166 12 l3 6 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1Z" fill="var(--halo-trim,#ffd700)"/>
+</g>
+
+<g class="emotion-sparkles" fill="#ffc83d"><path d="M22 92 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5Z"/><path d="M226 82 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3Z"/></g>
+<g class="thinking-dots" fill="#ffc83d"><circle cx="116" cy="18" r="3.5"/><circle cx="130" cy="12" r="3.5"/><circle cx="144" cy="18" r="3.5"/></g>
+<text class="sleep-z" x="188" y="48" font-size="21" font-weight="900" fill="#8d6be8">Z</text>
+</svg></button><div style="position:absolute;bottom:22px;font-weight:800;color:var(--primary)">رفيق رحلتك ينتظرك ✨</div></div></div>
+  <div class="stats"><div class="stat"><strong id="progressPercent">0%</strong><span>من الرحلة مكتمل</span></div><div class="stat"><strong id="completedCount">0 / 8</strong><span>مناطق مكتملة</span></div><div class="stat"><strong id="streak">1 ✦</strong><span>نقاط المعرفة</span></div></div>
+  <div class="section-head"><div><h2>خريطة نيل</h2><div class="muted">طريقك يتكشف خطوةً خطوة — يمكنك الرجوع إلى أي مكان فتحته.</div></div><span class="eyebrow">رحلتك · دورة 2</span></div>
+  <div class="world" id="world"><div class="world-title">🌿 ضفاف نيل · خريطة المغامرة</div>
+  <svg class="landscape" viewBox="0 0 1000 650" preserveAspectRatio="none" aria-hidden="true"><path d="M-50 140 C130 70 150 220 310 235 S500 110 610 205 S790 380 1050 280 L1050 410 C820 520 700 350 590 330 S380 430 260 360 S100 280 -50 370Z" fill="#76d5e0"/><path d="M-30 156 C130 90 160 238 310 250 S500 130 610 220 S790 400 1030 300" fill="none" stroke="#d8fbf6" stroke-width="7" stroke-linecap="round" opacity=".9"/><path d="M0 520 Q170 450 300 520 T560 530 T1000 470" fill="none" stroke="#9bcf8b" stroke-width="80" opacity=".6"/><g fill="#75b97b"><circle cx="95" cy="95" r="32"/><circle cx="130" cy="90" r="25"/><circle cx="865" cy="90" r="40"/><circle cx="900" cy="110" r="30"/><circle cx="880" cy="530" r="45"/><circle cx="920" cy="520" r="29"/><circle cx="80" cy="490" r="38"/><circle cx="110" cy="510" r="26"/></g><g fill="#fff4bf" opacity=".9"><circle cx="485" cy="65" r="3"/><circle cx="520" cy="82" r="2"/><circle cx="770" cy="170" r="3"/><circle cx="210" cy="405" r="2"/><circle cx="680" cy="530" r="3"/></g><g fill="#f5d5a0" stroke="#fff7d8" stroke-width="4"><path d="M370 72 l18 -22 18 22v30h-36z"/><path d="M395 62h25v40h-25z"/><path d="M815 340 l22 -26 22 26v40h-44z"/><path d="M840 329h24v51h-24z"/></g><g fill="#ffe8a5"><path d="M160 280 l10 -18 10 18z"/><path d="M720 420 l10 -18 10 18z"/><path d="M470 470 l10 -18 10 18z"/></g></svg>
+  <div id="destinations"></div><div id="mapMascot" class="map-mascot"><svg class="nee-mascot mascot-emotion-happy" viewBox="0 0 260 260" role="img" aria-label="تميمة نيل التفاعلية" tabindex="0">
+<title>نيل — رفيق المغامرة</title>
+<defs>
+ <linearGradient id="neeBody" x1="0" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="var(--mascot,#7042d8)"/><stop offset="1" stop-color="var(--mascot-dark,#5129b7)"/></linearGradient>
+ <linearGradient id="neeBelly" x1=".15" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="var(--mascot-belly,#eee4ff)"/><stop offset="1" stop-color="#d9c7ff"/></linearGradient>
+ <filter id="neeShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#321568" flood-opacity=".16"/></filter>
+</defs>
+<ellipse class="mascot-shadow" cx="132" cy="239" rx="73" ry="10" fill="#43306a" opacity=".14"/>
+<path d="M69 56 C45 28 31 35 39 58 C44 72 57 78 73 72Z" fill="var(--mascot-dark,#5129b7)"/>
+<path d="M188 53 C209 26 226 31 218 55 C213 69 201 76 185 70Z" fill="var(--mascot-dark,#5129b7)"/>
+<path class="flipper left-flipper" d="M48 151 C23 150 16 171 31 185 C42 194 56 180 60 164Z" fill="var(--mascot-dark,#5129b7)"/>
+<path class="flipper right-flipper" d="M207 147 C234 146 242 167 226 183 C215 194 201 179 197 162Z" fill="var(--mascot-dark,#5129b7)"/>
+<path d="M130 28 C82 28 52 53 42 99 C29 151 40 202 70 224 C91 240 112 243 132 243 C154 243 178 239 198 221 C227 194 236 148 222 98 C210 52 178 28 130 28Z" fill="url(#neeBody)" filter="url(#neeShadow)"/>
+<ellipse cx="88" cy="61" rx="17" ry="6" transform="rotate(-28 88 61)" fill="#fff" opacity=".13"/>
+<path d="M79 128 C84 107 103 99 130 100 C158 99 178 108 184 130 C194 164 183 204 160 218 C145 227 113 227 98 218 C75 204 67 164 79 128Z" fill="url(#neeBelly)"/>
+<ellipse class="cheek left-cheek" cx="73" cy="147" rx="15" ry="12" fill="var(--mascot-blush,#ff8eae)" opacity=".96"/>
+<ellipse class="cheek right-cheek" cx="190" cy="143" rx="15" ry="12" fill="var(--mascot-blush,#ff8eae)" opacity=".96"/>
+<g class="eye eye-left">
+ <ellipse class="eye-white" cx="94" cy="112" rx="31" ry="34" fill="var(--mascot-eye-white,#fff)"/>
+ <ellipse class="pupil" cx="99" cy="114" rx="18" ry="21" fill="var(--mascot-pupil,#17131f)"/>
+ <circle cx="106" cy="105" r="7.2" fill="#fff"/>
+ <circle cx="91" cy="121" r="3" fill="#fff" opacity=".85"/>
+</g>
+<g class="eye eye-right">
+ <ellipse class="eye-white" cx="166" cy="112" rx="31" ry="34" fill="var(--mascot-eye-white,#fff)"/>
+ <ellipse class="pupil" cx="161" cy="114" rx="18" ry="21" fill="var(--mascot-pupil,#17131f)"/>
+ <circle cx="168" cy="105" r="7.2" fill="#fff"/>
+ <circle cx="153" cy="121" r="3" fill="#fff" opacity=".85"/>
+</g>
+<path class="lid lid-left" d="M63 112 Q94 83 125 112" fill="none" stroke="#2a174d" stroke-width="8" stroke-linecap="round"/>
+<path class="lid lid-right" d="M135 112 Q166 83 197 112" fill="none" stroke="#2a174d" stroke-width="8" stroke-linecap="round"/>
+<path class="beak" d="M113 137 Q130 128 147 137 Q140 153 130 154 Q120 153 113 137Z" fill="var(--mascot-beak,#ffc52f)" stroke="#e8a000" stroke-width="2"/>
+<path class="mouth-open" d="M118 139 Q130 134 142 139 Q139 151 130 151 Q122 150 118 139Z" fill="#9d355d"/>
+<path class="smile" d="M116 140 Q130 157 144 140" fill="none" stroke="#a56a00" stroke-width="3" stroke-linecap="round"/>
+<path class="belly-star" d="M130 174 l5 9 10 1 -8 7 2 10 -9 -5 -9 5 2 -10 -8 -7 10 -1Z" fill="#b58aff" opacity=".96"/>
+
+<g class="acc acc-cap" aria-label="Cap">
+ <path d="M91 47 Q92 20 130 20 Q168 20 169 47 L163 61 L97 61Z" fill="var(--cap-color,#5c35bd)" stroke="var(--cap-trim,#ffc83d)" stroke-width="3" stroke-linejoin="round"/>
+ <path d="M84 58 Q130 51 176 58 Q182 61 177 67 Q130 74 83 67 Q78 63 84 58Z" fill="var(--cap-color,#5c35bd)" stroke="var(--cap-trim,#ffc83d)" stroke-width="3"/>
+ <path d="M97 48 Q130 53 163 48 L162 56 Q130 62 98 56Z" fill="var(--cap-trim,#ffc83d)"/>
+ <path d="M130 26 l4 7 8 1 -6 5 2 8 -8 -4 -7 4 1 -8 -6 -5 8 -1Z" fill="#fff1b9"/>
+</g>
+<g class="acc acc-top-hat" aria-label="Top hat">
+ <path d="M98 28 L95 2 L165 2 L162 28 Z" fill="var(--top-hat-color,#332a45)" stroke="var(--top-hat-trim,#ffc83d)" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M80 28 C80 23 180 23 180 28 C180 33 80 33 80 28 Z" fill="var(--top-hat-color,#332a45)" stroke="var(--top-hat-trim,#ffc83d)" stroke-width="2.5"/>
+ <rect x="96" y="21" width="68" height="6" fill="var(--top-hat-trim,#ffc83d)"/>
+</g>
+<g class="acc acc-glasses" aria-label="Glasses">
+ <rect x="62" y="91" width="61" height="45" rx="18" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5"/>
+ <rect x="137" y="91" width="61" height="45" rx="18" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5"/>
+ <path d="M123 105 Q130 100 137 105" fill="none" stroke="var(--glasses-color,#2b2638)" stroke-width="5" stroke-linecap="round"/>
+ <path d="M63 101 L72 96 M138 101 L147 96" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</g>
+<g class="acc acc-lashes" aria-label="Eyelashes" fill="none" stroke="var(--lashes-color,#271c43)" stroke-width="3" stroke-linecap="round">
+ <path d="M68 86 Q80 74 95 78 M102 79 Q115 76 122 84 M78 80 Q88 68 100 72"/>
+ <path d="M138 84 Q145 76 158 79 M165 78 Q180 74 192 86 M160 72 Q172 68 182 80"/>
+</g>
+<g class="acc acc-tie" aria-label="Tie">
+ <path d="M125 156 L130 160 L135 156 L133 174 L130 184 L127 174 Z" fill="var(--tie-color,#7042d8)" stroke="var(--tie-trim,#ffc83d)" stroke-width="1.5" stroke-linejoin="round"/>
+ <path d="M124 154 Q130 151 136 154 L134 159 L130 161 L126 159 Z" fill="var(--tie-trim,#ffc83d)" stroke="var(--tie-color,#7042d8)" stroke-width="1.2"/>
+</g>
+<g class="acc acc-scarf" aria-label="Scarf">
+ <path d="M65 130 C90 120 170 120 195 130 C205 142 200 158 185 154 C155 146 105 146 75 154 C60 158 55 142 65 130 Z" fill="var(--scarf-color,#e64a19)" stroke="var(--scarf-trim,#ffc83d)" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M152 148 C165 148 168 165 165 185 C162 195 145 195 145 182 C145 168 144 150 152 148 Z" fill="var(--scarf-color,#e64a19)" stroke="var(--scarf-trim,#ffc83d)" stroke-width="2" stroke-linejoin="round"/>
+</g>
+<!-- Bowtie moved down directly under the yellow beak -->
+<g class="acc acc-bowtie" aria-label="Bow Tie">
+ <path d="M130 164 Q111 147 107 162 Q105 176 128 171Z" fill="var(--bowtie-color,#e91e63)" stroke="var(--bowtie-trim,#ffffff)" stroke-width="2.5"/>
+ <path d="M130 164 Q149 147 153 162 Q155 176 132 171Z" fill="var(--bowtie-color,#e91e63)" stroke="var(--bowtie-trim,#ffffff)" stroke-width="2.5"/>
+ <circle cx="130" cy="167" r="5" fill="var(--bowtie-trim,#ffffff)"/>
+</g>
+<g class="acc acc-bow" aria-label="Head Bow">
+ <path d="M185 45 Q170 28 168 43 Q166 57 183 52Z" fill="var(--bow-color,#ff4081)" stroke="var(--bow-trim,#ffffff)" stroke-width="2"/>
+ <path d="M187 45 Q202 28 204 43 Q206 57 189 52Z" fill="var(--bow-color,#ff4081)" stroke="var(--bow-trim,#ffffff)" stroke-width="2"/>
+ <circle cx="186" cy="48" r="4" fill="var(--bow-trim,#ffffff)"/>
+</g>
+<g class="acc acc-flower" aria-label="Flower clip">
+ <path d="M188 72 Q181 59 190 57 Q200 57 196 69 Q207 60 211 69 Q214 78 201 78 Q208 91 197 94 Q187 94 190 81 Q178 88 174 79 Q172 69 188 72Z" fill="var(--flower-color,#ff9800)" stroke="var(--flower-trim,#ffffff)" stroke-width="2"/>
+ <circle cx="194" cy="76" r="5" fill="var(--flower-trim,#ffffff)"/>
+</g>
+<g class="acc acc-halo" aria-label="Magic halo">
+ <ellipse cx="130" cy="18" rx="34" ry="8" fill="none" stroke="var(--halo-trim,#ffd700)" stroke-width="5" transform="rotate(-7 130 18)"/>
+ <path d="M166 12 l3 6 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1Z" fill="var(--halo-trim,#ffd700)"/>
+</g>
+
+<g class="emotion-sparkles" fill="#ffc83d"><path d="M22 92 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5Z"/><path d="M226 82 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3Z"/></g>
+<g class="thinking-dots" fill="#ffc83d"><circle cx="116" cy="18" r="3.5"/><circle cx="130" cy="12" r="3.5"/><circle cx="144" cy="18" r="3.5"/></g>
+<text class="sleep-z" x="188" y="48" font-size="21" font-weight="900" fill="#8d6be8">Z</text>
+</svg></div>
+  <div class="map-foot"><div><strong id="currentArea">بداية الرحلة</strong><div class="tiny" id="mapHint">أكمل نشاط المنطقة لفتح الوجهة التالية.</div></div><div class="progress-row"><span class="tiny" id="mapProgressLabel">0 من 8</span><div class="progress-track"><span id="mapProgressBar" style="width:0%"></span></div></div></div>
+  </div>
+  <div class="section-head"><div><h2>كيف تتعلم في نيل؟</h2><div class="muted">مغامرة متكاملة، مع تحديات تناسب مستواك.</div></div></div>
+  <div class="features"><div class="feature"><div class="emoji">🧩</div><h3>تحديات ذكية</h3><p>تدرّب على المفردات والنحو والفهم، وتلقَّ تغذية راجعة مباشرة بعد كل إجابة.</p></div><div class="feature"><div class="emoji">🗣️</div><h3>جرّب صوتك</h3><p>خطط لعرضك، رتّب أفكارك، وتمرّن على التحدث بثقة خطوةً خطوة.</p></div><div class="feature"><div class="emoji">📚</div><h3>اقرأ واكتب</h3><p>اكتشف كتبًا عربية متاحة قانونيًا، واحفظ قصصك ومسوداتك في مساحتك الخاصة.</p></div></div>
+</section>
+<section id="library" class="page"><div class="section-head"><div><h2>مكتبة نيل 📚</h2><div class="muted">روابط لمكتبات وكتب عربية يمكن الوصول إليها عبر الإنترنت.</div></div></div><div class="panel"><input id="bookSearch" class="field" placeholder="ابحث عن مكتبة أو مورد عربي..." aria-label="ابحث في المكتبة"><div class="book-list" id="bookList" style="margin-top:16px"></div><p class="tiny">تختلف شروط الإتاحة من كتاب لآخر. افتح صفحة المصدر للتحقق من حقوق القراءة والتنزيل.</p></div></section>
+<section id="writing" class="page"><div class="section-head"><div><h2>مرسم الحكايات ✍️</h2><div class="muted">اكتب، راجع، واحفظ قصصك على هذا الجهاز.</div></div></div><div class="panel"><label for="storyTitle">عنوان القصة</label><input id="storyTitle" class="field" placeholder="عنوان يثير الفضول..." style="margin:8px 0 15px"><label for="storyText">قصتك بالعربية</label><textarea id="storyText" class="field" rows="10" placeholder="ابدأ من لحظة غيّرت كل شيء..." style="margin:8px 0 15px;line-height:1.9"></textarea><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="saveStory">احفظ المسودة</button><button class="secondary-btn" id="clearStory">مسودة جديدة</button><span id="storyStatus" class="muted" style="align-self:center"></span></div></div></section>
+<section id="profile" class="page"><div class="section-head"><div><h2>ملفي ومغامرتي</h2><div class="muted">تقدّمك وتفضيلاتك محفوظة محليًا على هذا الجهاز.</div></div></div><div class="panel"><div class="settings-grid"><div class="setting"><label>اسم المغامر</label><input id="learnerName" class="field" placeholder="كيف نناديك؟"></div><div class="setting"><label>المرحلة الدراسية</label><select id="gradeSelect" class="field"><option>الصف السادس</option><option>الصف السابع</option><option>الصف الثامن</option><option>الصف التاسع</option></select><div class="tiny">دورة 2 — المرحلة المدرسية، وليست مستوى CEFR.</div></div><div class="setting"><label>هدفك الأسبوعي</label><select id="goalSelect" class="field"><option>3 أنشطة</option><option>5 أنشطة</option><option>7 أنشطة</option><option>10 أنشطة</option></select></div><div class="setting"><label>المستوى المقترح</label><div id="levelText">سيظهر بعد التشخيص</div><div class="tiny">التقدير إرشادي وليس شهادة رسمية.</div></div></div><h3>سجل المناطق</h3><div id="history"></div><p class="tiny">وضع الضيف: تُحفظ بياناتك في تخزين المتصفح فقط، ولا تتزامن تلقائيًا بين الأجهزة أو المتصفحات.</p><button class="secondary-btn" id="resetProgress">إعادة ضبط التقدم</button></div></section>
+<section id="settings" class="page"><div class="section-head"><div><h2>استوديو التخصيص ✨</h2><div class="muted">صمّم ألوان عالمك والتميمة والإكسسوارات الخاصة بها.</div></div><button class="secondary-btn" id="resetSettings">إعادة ضبط الألوان</button></div><div class="panel"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><strong>النمط</strong><button class="secondary-btn" id="lightMode">نهاري ☀️</button><button class="secondary-btn" id="darkMode">ليلي 🌙</button><strong style="margin-inline-start:12px">قوالب سريعة</strong></div><div class="preset-row"><button class="swatch" title="بنفسجي نيل" style="background:#7042d8" data-preset="purple"></button><button class="swatch" title="زمرد" style="background:#187e72" data-preset="emerald"></button><button class="swatch" title="غروب" style="background:#c05c50" data-preset="sunset"></button><button class="swatch" title="ليلي" style="background:#27365f" data-preset="night"></button><button class="swatch" title="محيط" style="background:#247aa0" data-preset="ocean"></button></div><div class="settings-grid" id="colorSettings"></div><h3 style="margin-top:24px">ألوان التميمة الأساسية</h3><div class="settings-grid mascot-four-colors">
+<div class="setting"><label for="mascotColor">الجسم</label><input type="color" id="mascotColor" value="#7042d8"></div>
+<div class="setting"><label for="bellyColor">البطن</label><input type="color" id="bellyColor" value="#eee4ff"></div>
+<div class="setting"><label for="beakColor">المنقار</label><input type="color" id="beakColor" value="#ffc52f"></div>
+<div class="setting"><label for="blushColor">الخدود</label><input type="color" id="blushColor" value="#ff8eae"></div>
+</div>
+
+<h3 style="margin-top:28px">إكسسوارات نيل ✨</h3>
+<p class="tiny">اختر الإكسسوارات التي تريدها. تظهر ألوان كل إكسسوار مفرد أدناه للتحكم المستقل!</p>
+<div class="accessory-grid" id="accessoryGrid">
+<button type="button" class="accessory-option" data-accessory="cap" aria-pressed="false"><span class="accessory-emoji">🧢</span><span>قبعة</span></button>
+<button type="button" class="accessory-option" data-accessory="top-hat" aria-pressed="false"><span class="accessory-emoji">🎩</span><span>قبعة عالية</span></button>
+<button type="button" class="accessory-option" data-accessory="glasses" aria-pressed="false"><span class="accessory-emoji">👓</span><span>نظارات</span></button>
+<button type="button" class="accessory-option" data-accessory="lashes" aria-pressed="false"><span class="accessory-emoji">✨</span><span>رموش</span></button>
+<button type="button" class="accessory-option" data-accessory="tie" aria-pressed="false"><span class="accessory-emoji">👔</span><span>ربطة عنق</span></button>
+<button type="button" class="accessory-option" data-accessory="scarf" aria-pressed="false"><span class="accessory-emoji">🧣</span><span>وشاح</span></button>
+<button type="button" class="accessory-option" data-accessory="bowtie" aria-pressed="false"><span class="accessory-emoji">🦋</span><span>ربطة عنق فراشة</span></button>
+<button type="button" class="accessory-option" data-accessory="bow" aria-pressed="false"><span class="accessory-emoji">🎀</span><span>فيونكة شعر</span></button>
+<button type="button" class="accessory-option" data-accessory="flower" aria-pressed="false"><span class="accessory-emoji">🌼</span><span>مشبك زهرة</span></button>
+<button type="button" class="accessory-option" data-accessory="halo" aria-pressed="false"><span class="accessory-emoji">✨</span><span>هالة سحرية</span></button>
+</div>
+
+<h3 style="margin-top:24px">تخصيص ألوان الإكسسوارات المفردة 🎨</h3>
+<p class="tiny" style="margin-bottom:14px">كل إكسسوار تملكه يحصل على تبويب ألوان خاص به دون مشاركة الألوان بين الإكسسوارات الأخرى.</p>
+<div class="settings-grid" id="accessoryColorsPanel"></div>
+</div></section>
+</main><div class="footer">نيل · مساحة تجريبية للتعلّم والمغامرة · التقدم محفوظ على هذا الجهاز</div></div>
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-top"><div><div class="eyebrow" id="modalEyebrow">وجهة في نيل</div><h2 id="modalTitle">عنوان الوجهة</h2></div><button class="close" id="closeModal" aria-label="إغلاق">✕</button></div><div id="modalBody"></div></div></div><div class="toast" id="toast" role="status"></div>
+<script>
+const areas=[
+{id:'words',name:'وادي الكلمات',en:'Valley of Words',icon:'🌾',desc:'اكتشف الكلمات في سياقها، وتعرّف إلى الجذور والمترادفات والتراكيب.',type:'vocab',x:11,y:30,level:'الصف السادس–التاسع'},
+{id:'stories',name:'جزيرة الحكايات',en:'Story Island',icon:'🏝️',desc:'اقرأ نصوصًا عربية، واستنتج المعنى والفكرة الرئيسة وما بين السطور.',type:'reading',x:26,y:49,level:'بحسب نتيجة التشخيص'},
+{id:'grammar',name:'حديقة النحو',en:'Grammar Garden',icon:'🌳',desc:'حلّل الجمل، واكتشف العلاقات النحوية، وتدرّب على الإعراب.',type:'grammar',x:40,y:23,level:'بحسب الصف والمهارة'},
+{id:'cafe',name:'مقهى الحوار',en:'Conversation Café',icon:'☕',desc:'اختر ردودك في مواقف يومية ومدرسية وثقافية، وشاهد كيف يتغير الحوار.',type:'conversation',x:55,y:47,level:'بحسب نتيجة التشخيص'},
+{id:'stage',name:'مسرح الصوت',en:'Voice Theatre',icon:'🎭',desc:'خطط لعرض قصير، رتّب حججك، وتدرّب على بناء الثقة تدريجيًا.',type:'speaking',x:69,y:20,level:'تحديات متدرجة'},
+{id:'rhetoric',name:'حديقة البلاغة',en:'Rhetoric Garden',icon:'🌺',desc:'استكشف البيان والمعاني والبديع من خلال أمثلة وتحديات مناسبة للمرحلة.',type:'rhetoric',x:80,y:48,level:'بحسب الصف والمهارة'},
+{id:'secret',name:'المكتبة السرية',en:'Secret Library',icon:'🔮',desc:'تحديات مركّبة تجمع القراءة والنحو والمفردات والتفكير النقدي.',type:'challenge',x:91,y:25,level:'تُفتح بعد إتقان المسار'},
+{id:'library',name:'مكتبة نيل',en:'Neele Library',icon:'📚',desc:'مكتبة قراءة مستقلة بروابط خارجية لمصادر عربية متاحة. افتحها بعد إنهاء أول منطقة.',type:'library',x:87,y:75,level:'متاحة بعد أول منطقة'}
+];
+const questions={
+words:{prompt:'اختر الكلمة الأقرب في المعنى إلى «يُثابر».',choices:['يستسلم','يواظب ويستمر','يتردد','يتجاهل'],answer:1,explain:'يُثابر تعني يواصل العمل بجدّ رغم الصعوبات.'},
+stories:{prompt:'اقرأ: «أغلقت مريم دفترها، لكنها ظلت تفكر في السؤال الذي لم تجب عنه». ما الذي يمكن استنتاجه؟',choices:['أن مريم لا تحب الدراسة','أن السؤال ما زال يشغل تفكيرها','أن الدفتر ضاع','أن مريم أجابت عن كل الأسئلة'],answer:1,explain:'العبارة «ظلت تفكر» تدل على أن السؤال ما زال يشغلها.'},
+grammar:{prompt:'ما إعراب كلمة «المجتهدُ» في جملة «نجح الطالبُ المجتهدُ»؟',choices:['مفعول به منصوب','نعت مرفوع تابع للطالب','خبر منصوب','مضاف إليه مجرور'],answer:1,explain:'«المجتهدُ» نعت للطالب، ويتبعه في الرفع والتعريف.'},
+cafe:{prompt:'زميلك قال: «أختلف معك، لكن فكرتك تستحق النقاش». ما الرد الأكثر احترامًا وبناءً؟',choices:['أنت لا تفهم شيئًا','لن أستمع إليك','ما النقطة التي ترى أنها تحتاج إلى دليل؟','انتهى الحديث'],answer:2,explain:'السؤال الهادئ يفتح نقاشًا قائمًا على الأدلة والاحترام.'},
+stage:{prompt:'ما أفضل افتتاح لعرض مدرسي يقارن بين القراءة الورقية والرقمية؟',choices:['اليوم سأتحدث وخلاص','هل غيّرت طريقة القراءة كيف نفهم العالم؟','لا أعرف لماذا أنا هنا','سأقرأ كل ما في الورقة'],answer:1,explain:'السؤال المحفّز يجذب الجمهور ويمهّد لموضوع العرض.'},
+rhetoric:{prompt:'في عبارة «ابتسم الصباح»، ما الصورة البلاغية الأوضح؟',choices:['طباق','استعارة مكنية؛ شُبّه الصباح بإنسان يبتسم','جناس تام','أسلوب نهي'],answer:1,explain:'أُسنِد فعل إنساني (الابتسام) إلى الصباح، وهي استعارة مكنية.'},
+secret:{prompt:'أي جملة توظف سببًا ونتيجةً بوضوح؟',choices:['السماء زرقاء والكتاب جديد','لأنها راجعت الأدلة، استطاعت تبرير رأيها','ذهبت ثم عادت','ما أجمل الحديقة!'],answer:1,explain:'توضح الجملة العلاقة السببية بين مراجعة الأدلة وتبرير الرأي.'},
+library:{prompt:'ما السلوك الأفضل عند اختيار كتاب من مصدر إلكتروني؟',choices:['تحميل أي ملف دون فحص المصدر','التحقق من المصدر وحقوق الإتاحة وملاءمة المحتوى','مشاركة كلمة المرور','تجاهل بيانات المؤلف'],answer:1,explain:'تحقق من موثوقية المصدر وحقوق استخدام الكتاب.'}
+};
+const books=[
+{title:'مؤسسة هنداوي',desc:'كتب عربية مجانية في الأدب والفكر والعلوم، وفق شروط الموقع لكل عنوان.',url:'https://www.hindawi.org/books/'},
+{title:'مؤسسة هنداوي — قصص وروايات',desc:'استكشف الأدب العربي والعالمي المترجم ضمن مكتبة هنداوي.',url:'https://www.hindawi.org/books/categories/fiction/'},
+{title:'Internet Archive — Arabic',desc:'فهرس كتب ومواد عربية؛ تختلف إتاحة القراءة والاستعارة بحسب العنوان.',url:'https://archive.org/details/texts?and%5B%5D=language%3A%22Arabic%22'},
+{title:'المكتبة الرقمية العالمية',desc:'مواد ثقافية وتاريخية من مؤسسات حول العالم.',url:'https://www.wdl.org/'}
+];
+
+// Definitions for all accessories and their individual color schemes
+const accessoryMeta = {
+ 'cap': { name: 'قبعة', emoji: '🧢', hasTrim: true, defaultColor: '#5c35bd', defaultTrim: '#ffc83d' },
+ 'top-hat': { name: 'قبعة عالية', emoji: '🎩', hasTrim: true, defaultColor: '#332a45', defaultTrim: '#ffc83d' },
+ 'glasses': { name: 'نظارات', emoji: '👓', hasTrim: false, defaultColor: '#2b2638' },
+ 'lashes': { name: 'رموش', emoji: '✨', hasTrim: false, defaultColor: '#271c43' },
+ 'tie': { name: 'ربطة عنق', emoji: '👔', hasTrim: true, defaultColor: '#7042d8', defaultTrim: '#ffc83d' },
+ 'scarf': { name: 'وشاح', emoji: '🧣', hasTrim: true, defaultColor: '#e64a19', defaultTrim: '#ffc83d' },
+ 'bowtie': { name: 'ربطة عنق فراشة', emoji: '🦋', hasTrim: true, defaultColor: '#e91e63', defaultTrim: '#ffffff' },
+ 'bow': { name: 'فيونكة شعر', emoji: '🎀', hasTrim: true, defaultColor: '#ff4081', defaultTrim: '#ffffff' },
+ 'flower': { name: 'مشبك زهرة', emoji: '🌼', hasTrim: true, defaultColor: '#ff9800', defaultTrim: '#ffffff' },
+ 'halo': { name: 'هالة سحرية', emoji: '✨', hasTrim: false, defaultTrim: '#ffd700' }
+};
+
+const defaultState={
+ completed:[],unlocked:['words'],points:0,answers:0,name:'',grade:'الصف السادس',goal:'5 أنشطة',
+ level:'سيظهر بعد التشخيص',diagnosticDone:false,storyTitle:'',storyText:'',bookmarks:[],
+ settings:{
+  bg:'#f4f0ff',primary:'#7042d8',secondary:'#b7a0f2',accent:'#ffca62',text:'#271c43',panel:'#fffaff',border:'#ded2f8',mode:'light',
+  mascot:'#7042d8',belly:'#eee4ff',beak:'#ffc52f',blush:'#ff8eae',mascotDark:'#5129b7',
+  accessories:[],
+  accColors: {
+   'cap': { color: '#5c35bd', trim: '#ffc83d' },
+   'top-hat': { color: '#332a45', trim: '#ffc83d' },
+   'glasses': { color: '#2b2638' },
+   'lashes': { color: '#271c43' },
+   'tie': { color: '#7042d8', trim: '#ffc83d' },
+   'scarf': { color: '#e64a19', trim: '#ffc83d' },
+   'bowtie': { color: '#e91e63', trim: '#ffffff' },
+   'bow': { color: '#ff4081', trim: '#ffffff' },
+   'flower': { color: '#ff9800', trim: '#ffffff' },
+   'halo': { trim: '#ffd700' }
+  }
+ }
+};
+
+let state;
+try {
+ state = {...defaultState, ...JSON.parse(localStorage.getItem('neele-world-state')||'{}')};
+ state.settings = {...defaultState.settings, ...(state.settings||{})};
+ state.settings.accColors = {...defaultState.settings.accColors, ...(state.settings.accColors||{})};
+} catch(e) {
+ state = structuredClone(defaultState);
+}
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+function save(){localStorage.setItem('neele-world-state',JSON.stringify(state));renderProgress()}
+function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2300)}
+function currentIndex(){return Math.max(0,areas.findIndex(a=>state.unlocked.includes(a.id)&&!state.completed.includes(a.id)))}
+function renderMap(){const holder=$('#destinations');holder.innerHTML='';areas.forEach((a,i)=>{const locked=!state.unlocked.includes(a.id),done=state.completed.includes(a.id),current=!locked&&!done&&i===currentIndex();const b=document.createElement('button');b.className='destination '+(locked?'locked ':'')+(done?'done ':'')+(current?'current':'');b.style.left=a.x+'%';b.style.top=a.y+'%';b.innerHTML=`<span class="island">${locked?'🔒':done?'✓':a.icon}</span><strong>${a.name}</strong><span class="state">${done?'مكتملة':locked?'مقفلة':current?'موقعك الحالي':'مفتوحة'}</span>`;b.setAttribute('aria-label',a.name+(locked?'، مقفلة':''));b.onclick=()=>openArea(a);holder.appendChild(b)});const idx=currentIndex(),a=areas[idx];$('#mapMascot').style.left=a.x+'%';$('#mapMascot').style.top=(a.y-4)+'%';$('#currentArea').textContent=state.completed.length===areas.length?'أكملت الرحلة!':a.name;$('#mapHint').textContent=state.completed.length===areas.length?'أحسنت! استمر في مراجعة المناطق.':'أكمل نشاط المنطقة الحالية لفتح الخطوة التالية.';$('#mapProgressLabel').textContent=state.completed.length+' من '+areas.length;$('#mapProgressBar').style.width=(state.completed.length/areas.length*100)+'%';const world=$('#world');world.classList.toggle('night',state.settings.mode==='dark')}
+function renderProgress(){const pct=Math.round(state.completed.length/areas.length*100);$('#progressPercent').textContent=pct+'%';$('#completedCount').textContent=state.completed.length+' / '+areas.length;$('#streak').textContent=state.points+' ✦';renderMap();$('#history').innerHTML=areas.map(a=>`<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)"><span>${a.icon} ${a.name}</span><strong>${state.completed.includes(a.id)?'مكتملة ✓':state.unlocked.includes(a.id)?'مفتوحة':'مقفلة 🔒'}</strong></div>`).join('');$('#levelText').textContent=state.level;$('#learnerName').value=state.name;$('#gradeSelect').value=state.grade;$('#goalSelect').value=state.goal}
+function openArea(a){if(!state.unlocked.includes(a.id)){let need=areas[Math.max(0,areas.findIndex(x=>x.id===a.id)-1)];showModal('وجهة مقفلة 🔒',a.name,`<p>${a.desc}</p><div class="lesson-box"><strong>ما الذي تحتاج إليه؟</strong><p>أكمل «${need.name}» أولًا، ثم ستُفتح هذه الوجهة. التقدم يعتمد على إكمال النشاط، وليس على النقر على الخريطة فقط.</p></div><button class="primary" id="goPrevious">العودة إلى ${need.name}</button>`);$('#goPrevious').onclick=()=>openArea(need);return}
+if(a.type==='library'){showModal('مكتبة مفتوحة 📚',a.name,`<p>${a.desc}</p><button class="primary" id="openLibrary">افتح المكتبة</button>`);$('#openLibrary').onclick=()=>{closeModal();showPage('library')};return}
+const q=questions[a.id];const isDone=state.completed.includes(a.id);showModal(a.icon+' منطقة مغامرة',a.name,`<p>${a.desc}</p><div class="lesson-box"><div class="muted">المستوى الدراسي</div><strong>${state.grade} · ${a.level}</strong><p>${isDone?'أنجزت النشاط الأساسي هنا. يمكنك إعادة المحاولة للمراجعة.':'أجب عن التحدي التالي لإكمال النشاط وفتح الخطوة التالية.'}</p></div><div class="lesson-box"><strong>التحدي</strong><p>${q.prompt}</p><div id="answers">${q.choices.map((c,i)=>`<button class="answer" data-answer="${i}">${['أ','ب','ج','د'][i]}. ${c}</button>`).join('')}</div><div id="feedback" class="feedback"></div></div><div class="tiny">ملاحظة: هذه نسخة تجريبية تستخدم تفاعلات مبرمجة محليًا، وليست محادثة ذكاء اصطناعي حقيقية.</div>`);$$('[data-answer]').forEach(btn=>btn.onclick=()=>answerArea(a,Number(btn.dataset.answer),btn))}
+function answerArea(a,choice,btn){const q=questions[a.id],fb=$('#feedback');$$('[data-answer]').forEach(b=>b.disabled=true);const ok=choice===q.answer;btn.classList.add(ok?'correct':'wrong');if(!ok)$$('[data-answer]')[q.answer].classList.add('correct');fb.className='feedback show';fb.style.background=ok?'#d8f5df':'#ffe0e1';fb.style.color=ok?'#174c2a':'#7b202a';fb.innerHTML=(ok?'إجابة صحيحة! ✨ ':'ليست الإجابة الأدق. ') + q.explain + (ok?'<p><strong>اكتمل النشاط وفتحت الخطوة التالية.</strong></p>':'<p>راجع التفسير، ثم جرّب من جديد عند إعادة فتح المنطقة.</p>');state.answers++;if(ok&&!state.completed.includes(a.id)){state.completed.push(a.id);state.points+=10;const idx=areas.findIndex(x=>x.id===a.id);if(idx+1<areas.length&&!state.unlocked.includes(areas[idx+1].id))state.unlocked.push(areas[idx+1].id);save();toast('أُضيفت 10 نقاط معرفة!');const doneBtn=document.createElement('button');doneBtn.className='primary';doneBtn.textContent='تابع الرحلة';doneBtn.style.marginTop='10px';doneBtn.onclick=()=>{closeModal();renderMap()};fb.appendChild(doneBtn)}else if(!ok){const retry=document.createElement('button');retry.className='secondary-btn';retry.textContent='حاول مرة أخرى';retry.style.marginTop='10px';retry.onclick=()=>openArea(a);fb.appendChild(retry)}save()}
+
+// Neele mascot emotion engine
+let neeMoodTimer=null, neeIdleTimer=null, neeThinkingTimer=null, neeClickCount=0;
+const neeMascotSelectors='.nee-mascot';
+function setNeeMood(mood, duration=0){
+ document.querySelectorAll(neeMascotSelectors).forEach(m=>{
+  m.classList.remove('mascot-emotion-happy','mascot-emotion-excited','mascot-emotion-surprised','mascot-emotion-wink','mascot-emotion-thinking','mascot-emotion-sleepy');
+  m.classList.add('mascot-emotion-'+mood);
+ });
+ if(neeMoodTimer)clearTimeout(neeMoodTimer);
+ if(duration>0)neeMoodTimer=setTimeout(()=>setNeeMood('happy'),duration);
+}
+function neeWakeAndReact(){
+ clearTimeout(neeIdleTimer);clearTimeout(neeThinkingTimer);
+ neeClickCount++;
+ const moods=['surprised','wink','excited','happy'];
+ setNeeMood(moods[(neeClickCount-1)%moods.length],1300);
+ neeResetIdle();
+}
+function neeResetIdle(){
+ clearTimeout(neeIdleTimer);clearTimeout(neeThinkingTimer);
+ if(document.querySelector('.modal-backdrop.show')) neeThinkingTimer=setTimeout(()=>setNeeMood('thinking'),12000);
+ neeIdleTimer=setTimeout(()=>setNeeMood('sleepy'),45000);
+}
+function neeLessonOpened(){
+ clearTimeout(neeIdleTimer);clearTimeout(neeThinkingTimer);
+ setNeeMood('excited',2200);
+ neeThinkingTimer=setTimeout(()=>setNeeMood('thinking'),9000);
+ neeIdleTimer=setTimeout(()=>setNeeMood('sleepy'),45000);
+}
+function neeAttachMascots(){
+ document.querySelectorAll('.mascot-tap,.map-mascot').forEach(el=>{
+  if(el.dataset.neeBound)return;el.dataset.neeBound='1';
+  el.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();neeWakeAndReact()});
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();neeWakeAndReact()}});
+ });
+}
+neeAttachMascots();
+document.addEventListener('click',e=>{if(e.target.closest('.answer,[data-answer],#diagnosticBtn,.destination,[data-page],#exploreBtn'))neeResetIdle()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){clearTimeout(neeIdleTimer)}else neeResetIdle()});
+const neeOriginalShowModal=showModal;
+showModal=function(eyebrow,title,body){
+ neeOriginalShowModal(eyebrow,title,body);
+ if(/منطقة مغامرة|درس|تحدّ|التحدي|مكتبة مفتوحة/.test(String(eyebrow)+' '+String(title)))neeLessonOpened();
+ else neeResetIdle();
+};
+const neeOriginalCloseModal=closeModal;
+closeModal=function(){neeOriginalCloseModal();setNeeMood('happy');neeResetIdle()};
+setInterval(()=>{if(!document.querySelector('.modal-backdrop.show')&&!document.hidden)setNeeMood('thinking',1600)},28000);
+neeResetIdle();
+
+function showModal(eyebrow,title,body){$('#modalEyebrow').textContent=eyebrow;$('#modalTitle').textContent=title;$('#modalBody').innerHTML=body;$('#modalBackdrop').classList.add('show')}
+function closeModal(){$('#modalBackdrop').classList.remove('show')}
+function showPage(id){$$('.page').forEach(p=>p.classList.toggle('active',p.id===id));$$('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});if(id==='profile')renderProgress()}
+$$('[data-page]').forEach(b=>b.onclick=()=>showPage(b.dataset.page));$('#closeModal').onclick=closeModal;$('#modalBackdrop').onclick=e=>{if(e.target===$('#modalBackdrop'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('#exploreBtn').onclick=()=>$('#world').scrollIntoView({behavior:'smooth',block:'center'});$('#profileQuick').onclick=()=>showPage('profile');
+function renderBooks(filter=''){const list=$('#bookList');list.innerHTML='';books.filter(b=>(b.title+' '+b.desc).toLowerCase().includes(filter.toLowerCase())).forEach(b=>{const el=document.createElement('div');el.className='book';el.innerHTML=`<h3>${b.title}</h3><p>${b.desc}</p><a href="${b.url}" target="_blank" rel="noopener noreferrer">زيارة المصدر ↗</a>`;list.appendChild(el)});if(!list.children.length)list.innerHTML='<p>لم نعثر على نتائج مطابقة.</p>'}$('#bookSearch').oninput=e=>renderBooks(e.target.value);renderBooks();
+$('#saveStory').onclick=()=>{state.storyTitle=$('#storyTitle').value;state.storyText=$('#storyText').value;save();$('#storyStatus').textContent='حُفظت المسودة على هذا الجهاز ✓';toast('حُفظت قصتك')};$('#clearStory').onclick=()=>{if(confirm('بدء مسودة جديدة؟ احفظ عملك الحالي أولًا إن أردت الاحتفاظ به.')){$('#storyTitle').value='';$('#storyText').value='';$('#storyStatus').textContent='مسودة جديدة'}};$('#storyTitle').value=state.storyTitle||'';$('#storyText').value=state.storyText||'';
+$('#learnerName').onchange=e=>{state.name=e.target.value;save();toast('تم حفظ الملف')};$('#gradeSelect').onchange=e=>{state.grade=e.target.value;save()};$('#goalSelect').onchange=e=>{state.goal=e.target.value;save()};
+$('#resetProgress').onclick=()=>{if(confirm('هل تريد إعادة ضبط التقدم والمناطق المفتوحة؟ لا يمكن التراجع عن ذلك.')){state.completed=[];state.unlocked=['words'];state.points=0;state.answers=0;save();toast('أُعيد ضبط التقدم')}}
+
+const colorMeta=[['bg','الخلفية'],['primary','اللون الأساسي'],['secondary','اللون الثانوي'],['accent','لون التمييز'],['text','لون النص'],['panel','البطاقات واللوحات'],['border','الحدود']];
+function renderColorControls(){
+ const box=$('#colorSettings'); box.innerHTML='';
+ colorMeta.forEach(([key,label])=>{const d=document.createElement('div');d.className='setting';d.innerHTML=`<label>${label}<input type="color" data-color="${key}"></label><input type="text" data-hex="${key}" maxlength="7" aria-label="قيمة HEX لـ ${label}">`;box.appendChild(d)});
+ $$('[data-color]').forEach(inp=>{const k=inp.dataset.color;inp.value=state.settings[k];inp.oninput=()=>{state.settings[k]=inp.value;applySettings();$$(`[data-hex="${k}"]`)[0].value=inp.value;save()}});
+ $$('[data-hex]').forEach(inp=>{const k=inp.dataset.hex;inp.value=state.settings[k];inp.onchange=()=>{if(/^#[0-9a-fA-F]{6}$/.test(inp.value)){state.settings[k]=inp.value;applySettings();$$(`[data-color="${k}"]`)[0].value=inp.value;save()}else{inp.value=state.settings[k];toast('أدخل قيمة HEX مثل #7042D8')}}});
+}
+
+// Render dedicated color controls for each active accessory
+function renderAccessoryColorControls() {
+ const panel = $('#accessoryColorsPanel');
+ if (!panel) return;
+ panel.innerHTML = '';
+ const activeAccs = state.settings.accessories || [];
+
+ if (activeAccs.length === 0) {
+  panel.innerHTML = '<p class="muted" style="grid-column: 1 / -1;">لم يتم اختيار أي إكسسوارات حالياً. اختر إكسسواراً من القائمة أعلاه لتخصيص ألوانه.</p>';
+  return;
+ }
+
+ activeAccs.forEach(accId => {
+  const info = accessoryMeta[accId];
+  if (!info) return;
+
+  const card = document.createElement('div');
+  card.className = 'acc-color-card';
+
+  const cardHead = document.createElement('div');
+  cardHead.className = 'acc-color-card-head';
+  cardHead.innerHTML = `<span>${info.emoji}</span><span>${info.name}</span>`;
+  card.appendChild(cardHead);
+
+  const inputsDiv = document.createElement('div');
+  inputsDiv.className = 'acc-color-inputs';
+
+  const currentAccState = state.settings.accColors[accId] || {};
+  const currentColor = currentAccState.color || info.defaultColor || '#7042d8';
+  const currentTrim = currentAccState.trim || info.defaultTrim || '#ffffff';
+
+  if (info.hasTrim || info.defaultColor) {
+   const mainColorField = document.createElement('div');
+   mainColorField.className = 'acc-color-field';
+   mainColorField.innerHTML = `<label>اللون الرئيسي</label><input type="color" data-acc-id="${accId}" data-acc-type="color" value="${currentColor}">`;
+   inputsDiv.appendChild(mainColorField);
+  }
+
+  if (info.hasTrim || info.defaultTrim) {
+   const trimColorField = document.createElement('div');
+   trimColorField.className = 'acc-color-field';
+   trimColorField.innerHTML = `<label>لون التفاصيل</label><input type="color" data-acc-id="${accId}" data-acc-type="trim" value="${currentTrim}">`;
+   inputsDiv.appendChild(trimColorField);
+  }
+
+  card.appendChild(inputsDiv);
+  panel.appendChild(card);
+ });
+
+ // Event handlers for individual color inputs
+ panel.querySelectorAll('input[type=color]').forEach(input => {
+  input.addEventListener('input', (e) => {
+   const id = e.target.dataset.accId;
+   const type = e.target.dataset.accType;
+   if (!state.settings.accColors[id]) state.settings.accColors[id] = {};
+   state.settings.accColors[id][type] = e.target.value;
+   applySettings();
+   save();
+  });
+ });
+}
+
+function applySettings(){
+ const s=state.settings,root=document.documentElement;
+ [['bg','--bg'],['primary','--primary'],['secondary','--secondary'],['accent','--accent'],['text','--text'],['panel','--panel'],['border','--border'],
+ ['mascot','--mascot'],['belly','--mascot-belly'],['beak','--mascot-beak'],['blush','--mascot-blush']].forEach(([k,v])=>root.style.setProperty(v,s[k]));
+ 
+ // Apply individual accessory CSS variables to the document element
+ Object.keys(accessoryMeta).forEach(accId => {
+  const accState = s.accColors[accId] || {};
+  const meta = accessoryMeta[accId];
+  const colorVal = accState.color || meta.defaultColor || '#7042d8';
+  const trimVal = accState.trim || meta.defaultTrim || '#ffffff';
+  root.style.setProperty(`--${accId}-color`, colorVal);
+  root.style.setProperty(`--${accId}-trim`, trimVal);
+ });
+
+ if(s.mode==='dark'){root.style.setProperty('--bg','#171426');root.style.setProperty('--text','#f5efff');root.style.setProperty('--panel','#242039');root.style.setProperty('--border','#40365d');}
+ document.body.style.background='var(--bg)';$('#world')?.classList.toggle('night',s.mode==='dark');
+ $('#mascotColor').value=s.mascot;$('#bellyColor').value=s.belly;$('#beakColor').value=s.beak||'#ffc52f';$('#blushColor').value=s.blush||'#ff8eae';
+ 
+ document.querySelectorAll('.nee-mascot').forEach(m=>{
+  ['cap','top-hat','glasses','lashes','tie','scarf','bowtie','bow','flower','halo'].forEach(a=>m.classList.toggle('acc-'+a,(s.accessories||[]).includes(a)));
+ });
+ document.querySelectorAll('[data-accessory]').forEach(b=>{const active=(s.accessories||[]).includes(b.dataset.accessory);b.setAttribute('aria-pressed',String(active));});
+}
+
+function setMode(mode){state.settings.mode=mode;applySettings();save()}
+$('#lightMode').onclick=()=>setMode('light');$('#darkMode').onclick=()=>setMode('dark');
+[['mascotColor','mascot'],['bellyColor','belly'],['beakColor','beak'],['blushColor','blush']].forEach(([id,key])=>{
+ $('#'+id).oninput=e=>{state.settings[key]=e.target.value;applySettings();save()};
+});
+
+const accessoryGroups={ 'cap':'head','top-hat':'head','bow':'head','flower':'head','halo':'head','glasses':'face','lashes':'face','tie':'neck','scarf':'neck','bowtie':'neck' };
+document.querySelectorAll('[data-accessory]').forEach(btn=>btn.addEventListener('click',()=>{
+ const a=btn.dataset.accessory,selected=new Set(state.settings.accessories||[]);
+ if(selected.has(a))selected.delete(a);
+ else{
+  const group=accessoryGroups[a];
+  if(group==='head')Object.keys(accessoryGroups).filter(k=>accessoryGroups[k]==='head').forEach(k=>selected.delete(k));
+  if(group==='neck')Object.keys(accessoryGroups).filter(k=>accessoryGroups[k]==='neck').forEach(k=>selected.delete(k));
+  selected.add(a);
+ }
+ state.settings.accessories=[...selected];
+ applySettings();
+ renderAccessoryColorControls();
+ save();
+}));
+
+const presets={purple:{primary:'#7042d8',secondary:'#b7a0f2',accent:'#ffca62',bg:'#f4f0ff',text:'#271c43',panel:'#fffaff',border:'#ded2f8'},emerald:{primary:'#187e72',secondary:'#9ad8c9',accent:'#f4c95d',bg:'#edf8f4',text:'#183b37',panel:'#fbfffd',border:'#c8e4db'},sunset:{primary:'#c05c50',secondary:'#f0b7a8',accent:'#f4c95d',bg:'#fff2ec',text:'#482522',panel:'#fffaf6',border:'#f1d2c8'},night:{primary:'#8d78ee',secondary:'#55507d',accent:'#f5c76b',bg:'#171426',text:'#f5efff',panel:'#242039',border:'#40365d',mode:'dark'},ocean:{primary:'#247aa0',secondary:'#8ccddd',accent:'#f5c76b',bg:'#eef8fc',text:'#183544',panel:'#fbfeff',border:'#c8e6ef'}};
+$$('[data-preset]').forEach(b=>b.onclick=()=>{state.settings={...state.settings,...presets[b.dataset.preset]};if(!presets[b.dataset.preset].mode)state.settings.mode='light';renderColorControls();applySettings();renderAccessoryColorControls();save();toast('تم تطبيق القالب')});
+$('#resetSettings').onclick=()=>{state.settings={...defaultState.settings};renderColorControls();applySettings();renderAccessoryColorControls();save();toast('عادت الألوان الافتراضية')};
+
+function runDiagnostic(){
+const banks=[
+{skill:'المفردات والدلالة',items:[
+['ما الدلالة الأدق لـ«يتحرّى الدقة»؟',['يتجاهلها','يتثبت منها','يؤجلها','يخفيها'],1],['«ضرب صفحًا عن الأمر» تعني:',['أعرض عنه','أثبته','كرره','ناقشه'],0],['عضّد الكاتب رأيه بـ___ موثقة.',['شواهد','شاهدٌ','شهادةً','مشاهدة'],0],['«استبانت الحقيقة» أي:',['اختفت','اتضحت','التبست','تبدلت'],1],['«مآل القرار» تعني:',['عاقبته','لونه','حجمه','عنوانه'],0],['ضد الإسهاب هو:',['الإطناب','الإطالة','الإيجاز','التفصيل'],2],['الأقرب إلى «متأنٍّ»:',['متسرع','متروٍّ','متهور','غاضب'],1],['استنتاج معنى من قرائن يسمى:',['استنباطًا','إهمالًا','تكرارًا','تلقينًا'],0],['«اتخذ ضيق الوقت ذريعة»؛ الذريعة هي:',['حجة يتذرع بها','نتيجة مؤكدة','خطة ناجحة','دليل قاطع'],0],['أي تعبير أفصح؟',['أجرى قرارًا','اتخذ قرارًا','صنع قرارًا عليه','عمل قرارًا'],1]]},
+{skill:'النحو والصرف',items:[
+['الصحيح ضبطًا:',['إن المعلمون مخلصون','إن المعلمين مخلصون','إن المعلمين مخلصين','إن المعلمون مخلصين'],1],['«مجتهدًا» في «ما زال الطالب مجتهدًا»:',['حال','خبر ما زال','مفعول به','تمييز'],1],['علامة جزم «يسعَ» في «لم يسعَ»:',['السكون','حذف حرف العلة','حذف النون','الفتحة'],1],['المفعول المطلق في:',['عاد مساءً','انطلق انطلاقًا سريعًا','جلس على الكرسي','قرأ الكتاب'],1],['«الفائزَ» في «كرّم المدير الطالبَ الفائزَ»:',['بدل مرفوع','نعت منصوب','مضاف إليه','حال مرفوع'],1],['الصحيح ضبطًا:',['إن الصدقُ منجاةٌ','إن الصدقَ منجاةٌ','إن الصدقَ منجاةً','إن الصدقِ منجاةٌ'],1],['«مَن» في «أكرم مَن يصدق» اسم:',['استفهام','موصول','شرط جازم','نفي'],1],['الفعل المنصوب من الأفعال الخمسة:',['لن يتأخروا','لم يتأخروا','يتأخرون','يتأخرن'],0],['«جنديًّا» في «عاد الجنود إلا جنديًّا»:',['فاعل','مستثنى منصوب','مضاف إليه','نعت'],1],['الجملة التي فيها نائب فاعل:',['شرح المعلم القاعدة','شُرحت القاعدة','يفهم الطالب القاعدة','يشرح المعلم القاعدة'],1]]},
+{skill:'القراءة والاستدلال',items:[
+['زاد عدد الزوار وانخفض متوسط مدة الزيارة. الأدق:',['غادر الجميع فورًا','زيادة العدد لا تعني زيادة مدة الزيارة','أغلق المكان','زادت الزيارات الطويلة'],1],['«لم ينفِ التقرير المشكلة، بل شكك في كفاية البيانات». موقفه:',['ينفيها','يثبت حجمها','يتحفظ على كفاية الأدلة','يرفض البيانات'],2],['أقوى دليل على فاعلية طريقة تعليمية:',['تعليق واحد','مقارنة نتائج قبلها وبعدها ومجموعة مقارنة','إعلان جذاب','رأي المطور'],1],['عرض الكاتب اعتراضًا وردّ عليه لي:',['يربك القارئ','يقوي الحجة بمناقشة رأي آخر','يغير الموضوع','يثبت تساوي الآراء'],1],['لم يصفق الجمهور وظل ينظر للمتحدث. استنتاج محتمل:',['كان يصغي دون إظهار إعجاب','غادر','قاطعه','وافقه جميعًا'],0],['أضعف دليل على نجاح تطبيق:',['تجربة متكررة','دراسة مقارنة','تعليق واحد يصفه بالممتع','نتائج مدارس متعددة'],2],['الارتباط لا يثبت السببية لأن:',['التزامن يثبت السبب','قد يرتبط حدثان دون أن يسبب أحدهما الآخر','السببية مستحيلة','الأرقام لا تفيد'],1],['عنوان لنص يوازن فوائد الذكاء الاصطناعي ومخاطره:',['التقنية شر مطلق','فرص الذكاء الاصطناعي وتحدياته','نهاية التعليم','منع الابتكار'],1],['حالة فردية استُخدمت لتعميم قاعدة؛ السؤال النقدي:',['هل القصة ممتعة؟','هل تكفي حالة واحدة للتعميم؟','هل النص طويل؟','هل الاسم مألوف؟'],1],['الأدق تمييزًا للحقيقة والاستنتاج:',['حجم العينة قابل للتحقق والتعميم يحتاج دليلًا','كل استنتاج حقيقة','الرأي لا يبرر','الأرقام لا تحتاج مصدرًا'],0]]},
+{skill:'الكتابة وبناء الجملة',items:[
+['كانت الفرضية معقولة؛ ___ لم تؤيدها النتائج.',['لذلك','غير أن','إذًا','فضلًا عن ذلك'],1],['الصياغة الأكثر موضوعية:',['كل مخالف مخطئ','تشير البيانات إلى احتمال يحتاج تحققًا','هذا صحيح لأنني أراه','لا يناقش الرأي'],1],['الجملة المتماسكة منطقيًا:',['لم يقرأ النص فاستشهد بتفاصيله','راجع المصادر قبل النتيجة','مؤكد وربما خاطئ بالتأكيد','لم تتغير لكنها تغيرت كليًا'],1],['ترتيب فقرة تفسيرية أفضل:',['نتيجة وأمثلة عشوائية','فكرة ثم تفسير ودليل وخلاصة','أمثلة بلا موضوع','خاتمة بلا مقدمة'],1],['الاستخدام الصحيح للفاصلة المنقوطة:',['أحب القراءة؛ لأنها توسع خبرتي','أحب؛ القراءة لأنها توسع؛ خبرتي','أحب القراءة؛. لأنها توسع','أحب القراءة لأنها؛ توسع'],0],['أفضل تحرير: «المساحات الخضراء تقلل الحرارة. المساحات الخضراء تحسن الهواء.»',['المساحات الخضراء تقلل الحرارة وتحسّن جودة الهواء','المدينة المدينة مهمة','مساحات، مدينة، حرارة','حذف الفقرة'],0],['خاتمة متوازنة:',['اعتماد المقترح مع تقييم نتائجه دوريًا','كل مخالف لا يفهم','انتهى بلا نتيجة','لا شيء مهم'],0],['طلب رسمي لتمديد موعد:',['أبغى وقت زيادة','أرجو النظر في تمديد الموعد للأسباب الموضحة','مددوا فورًا','لازم توافقون'],1],['الاستخدام الصحيح لـ«على الرغم من»:',['على الرغم من أن الوقت ضيق، أنجز الفريق المهمة','على الرغم من الوقت ضيق لأن المهمة','على الرغم من أن الوقت ضيق لكن أنجز','على الرغم من، أنجز'],0],['تكرار الادعاء دون دليل يؤدي إلى:',['تطوير الحجة','ضعف الدعم والتطوير','تنوع الأدلة','وضوح بالضرورة'],1]]},
+{skill:'البلاغة وتحليل النص',items:[
+['«تتثاءب المدينة عند الفجر» فيها:',['استعارة مكنية وتشخيص','طباق','جناس تام','كناية عن الكرم'],0],['أثر الطباق بين النور والظلام:',['إبراز المعنى بالمقابلة','تحديد الزمن','تغيير المتكلم','إلغاء الصورة'],0],['«نظيف اليد» كناية عن:',['غسل اليدين','النزاهة','سرعة الحركة','التنظيف'],1],['العبارة الأقرب إلى حكمة بتشبيه ضمني:',['العلم كالنور','لا يستقيم الظل والعود أعوج','وجهها مثل القمر','كأن البحر مرآة'],1],['الفرق الأدق:',['المكنية تحذف المشبه به وتبقي قرينة، والتشبيه يذكر طرفي المقارنة غالبًا','لا فرق','التشبيه بلا طرفين','الاستعارة حقيقة حرفية'],0],['«لا يقاس النجاح بعدد الخطوات بل بوجهتها» تبرز:',['تقابل الكم والغاية','سجعًا إلزاميًا','وصفًا حسيًا فقط','تكرارًا بلا غرض'],0],['كناية عن الشجاعة:',['طويل القامة','لا يغمض له جفن في موطن الخطر','أزرق القميص','يسكن قرب المدرسة'],1],['«أيمكن تأجيل حماية البيئة إلى الغد؟» غرض الاستفهام:',['طلب موعد حرفيًا','الإنكار والحث على المبادرة','طلب تعريف','إظهار الجهل'],1],['«ضحك البحر في وجه السفن» تشخيص لأنه:',['يسند فعلًا إنسانيًا لغير الإنسان','يتضمن حرف جر','بالماضي','يذكر مكانًا'],0],['«الكلمات جسور بين العقول» هي:',['استعارة للتواصل والتقارب','حقيقة حرفية','طباق','نهي'],0]]},
+{skill:'التفكير النقدي والتحرير',items:[
+['مصدران موثوقان يختلفان بالأرقام؛ الأفضل:',['اختيار الأكبر','مقارنة التاريخ والتعريف والمنهج','إهمالهما','أخذ المتوسط بلا فحص'],1],['التعميم المتسرع هو:',['عينة ممثلة','أعجب طالبان بالتطبيق إذن هو الأفضل للجميع','مقارنة فصول','ذكر حدود العينة'],1],['أفضل تقييم لبرنامج تعليمي:',['عدد الإعجابات','قياس التعلم قبل وبعد ومقارنته بمجموعة مناسبة','رأي المطور','جمال الواجهة'],1],['«لم يثبت أن الطريقة نافعة» يعني:',['ثبت ضررها','الدليل على نفعها غير كافٍ حتى الآن','ثبت نفعها','لا حاجة للبحث'],1],['سؤال يكشف تحيزًا في دراسة:',['لون الغلاف','من موّلها وكيف اختير المشاركون؟','عدد الصفحات','جاذبية العنوان'],1],['الفرق بين التلخيص والتعليق:',['التلخيص يعرض الأفكار بأمانة والتعليق يضيف تقييمًا','كلاهما نسخ','التلخيص رأي دائمًا','التعليق يحذف الأدلة'],0],['صياغة تلتزم بحدود الدليل:',['تثبت النتيجة ذلك دائمًا','تشير العينة إلى احتمال وجود علاقة','لا استثناءات','كل الناس متشابهون'],1],['لفحص علاقة النوم بالتركيز، ينبغي ضبط:',['لون الاستبيان','عوامل أخرى مثل الصحة واستخدام الأجهزة','اسم الباحث فقط','عدد كلمات الملخص'],1],['اكتشفت خطأ في اقتباس؛ الأفضل:',['تركه','مراجعة المصدر وتصحيح الاقتباس والإحالة','تغيير اسم المصدر','حذف المراجع'],1],['مراجعة ذاتية عميقة للمقال:',['هل المقال طويل؟','هل لكل ادعاء دليل وهل عالجت اعتراضًا محتملًا؟','هل كررت الفكرة؟','هل سيوافقني الجميع؟'],1]]}
+];const diagnostic=banks.flatMap(bank=>bank.items.map((item,i)=>({skill:bank.skill,q:item[0],c:item[1],a:item[2],id:bank.skill+'-'+i})));
+let idx=0,score=0,skillScores={};
+function draw(){
+ const item=diagnostic[idx];
+ showModal('التشخيص الشامل · '+(idx+1)+' من 60','اكتشف نقاط قوتك',`<div class="progress-track" style="margin:14px 0"><span style="width:${idx/60*100}%"></span></div><div class="tiny">المهارة: ${item.skill}</div><div class="lesson-box"><p>${item.q}</p>${item.c.map((c,i)=>`<button class="answer" data-diag="${i}">${['أ','ب','ج','د'][i]}. ${c}</button>`).join('')}</div><div class="tiny">أجب عن الأسئلة الستين لتكوين صورة أوسع عن مهاراتك. هذا اختبار محلي ولا يحتاج إلى API.</div>`);
+ $$('[data-diag]').forEach(b=>b.onclick=()=>{
+  const n=+b.dataset.diag,ok=n===item.a;
+  if(ok)score++;
+  skillScores[item.skill]??={right:0,total:0};skillScores[item.skill].total++;if(ok)skillScores[item.skill].right++;
+  idx++;if(idx<diagnostic.length){draw();return}
+  const pct=Math.round(score/60*100);
+  state.level=pct>=85?'متقدم — جرّب تحديات أعمق':pct>=60?'متوسط — واصل بناء المهارات':'أساسيات — ابدأ بالتدرج';
+  state.diagnosticDone=true;state.diagnosticScore=score;state.skillScores=skillScores;save();
+  const rows=Object.entries(skillScores).map(([k,v])=>`<div style="margin:10px 0"><div style="display:flex;justify-content:space-between"><span>${k}</span><strong>${v.right}/${v.total}</strong></div><div class="progress-track"><span style="width:${v.right/v.total*100}%"></span></div></div>`).join('');
+  showModal('اكتمل التشخيص ✨','نتيجة مهاراتك',`<div class="lesson-box"><strong>نتيجتك: ${score} من 60 (${pct}%)</strong><p>${state.level}</p></div><h3>حسب المهارة</h3>${rows}<p class="tiny">نتيجة تعليمية إرشادية وليست تقييمًا رسميًا.</p><button class="primary" id="diagDone">العودة إلى الرحلة</button>`);
+  $('#diagDone').onclick=()=>closeModal();
+ });
+}
+draw()
+}
+$('#diagnosticBtn').onclick=runDiagnostic;
+
+renderColorControls();
+applySettings();
+renderAccessoryColorControls();
+renderProgress();
+</script></body></html>
